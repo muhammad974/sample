@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mbsagency.vercel.app/sitemap.xml
+Sitemap: https://www.mbsagency.online/sitemap.xml
