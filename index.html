@@ -2564,17 +2564,18 @@ const portfolioProjects = [
   var index = N; // start at the first real card (middle third of the track)
   var autoTimer = null;
 
-  function visibleCount(){
-    var w = viewport.getBoundingClientRect().width;
-    if (w >= 1000) return 3;
-    if (w >= 700) return 2;
-    return 1;
-  }
-
   function render(withTransition){
     track.style.transition = withTransition ? 'transform .6s cubic-bezier(.16,1,.3,1)' : 'none';
-    var pct = 100 / visibleCount();
-    track.style.transform = 'translateX(-' + (index * pct) + '%)';
+    // Measure in real pixels rather than using a percentage: translateX(%) is relative to
+    // the track's own box width, which does NOT include the `gap` CSS spacing between cards.
+    // Using percentages here caused the shift to fall short of each card's true position,
+    // and the error compounded with every index, so later cards on mobile (where the gap is
+    // proportionally larger relative to card width) ended up cut off and misaligned.
+    var firstCard = track.children[0];
+    var cardWidth = firstCard.getBoundingClientRect().width;
+    var gapPx = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+    var step = cardWidth + gapPx;
+    track.style.transform = 'translateX(-' + (index * step) + 'px)';
     updateDots();
   }
 
