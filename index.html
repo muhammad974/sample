@@ -11,6 +11,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
+<meta name="darkreader-lock">
 <title>MBS Agency — Design. Develop. Automate. | Web Design, Branding & AI Automation</title>
 <meta name="description" content="MBS Agency builds premium websites, brand identities, AI chatbots and business automation that drive real growth for ambitious brands.">
 
@@ -22,6 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
 
 :root{
+  color-scheme: only light;
   /* Brand palette (per brief) */
   --primary: #2563EB;
   --primary-accent: #3B82F6;
@@ -61,18 +65,6 @@ html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
   --transition: .45s var(--ease);
 }
 
-[data-theme="dark"]{
-  --bg: #0B1220;
-  --surface: #101a30;
-  --surface-2: #0d1626;
-  --text: #F1F5F9;
-  --text-soft: #B6C2D9;
-  --text-faint: #6B7C99;
-  --border: rgba(255,255,255,.08);
-  --card-shadow: 0 10px 40px -12px rgba(0,0,0,.55);
-  --nav-bg: rgba(11,18,32,.65);
-  --gray-bg: #0d1626;
-}
 
 body{
   font-family:'Inter',sans-serif;
@@ -158,7 +150,6 @@ section{ position:relative; }
 .logo:hover .logo-badge{ transform:scale(1.05); }
 .logo-badge img{ height:26px; width:auto; display:block; }
 .logo .accent{ color:var(--primary); }
-[data-theme="dark"] .logo{ color:#fff; }
 
 .nav-links{ display:flex; align-items:center; gap:2px; }
 .nav-links a{
@@ -173,11 +164,6 @@ section{ position:relative; }
 .nav-links a:hover::after{ transform:scaleX(1); }
 
 .nav-actions{ display:flex; align-items:center; gap:14px; }
-.theme-toggle{
-  width:40px; height:40px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center;
-  color:var(--text-soft); transition: all .3s var(--ease);
-}
-.theme-toggle:hover{ border-color:var(--primary); color:var(--primary); transform:rotate(20deg); }
 
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
@@ -215,7 +201,6 @@ section{ position:relative; }
   .logo{ font-size:1.15rem; }
   .logo-mark{ width:32px; height:32px; font-size:.85rem; border-radius:9px; }
   .nav-actions{ gap:8px; }
-  .theme-toggle{ width:36px; height:36px; }
   .navbar{ padding:16px 0; }
   .navbar.scrolled{ padding:10px 0; }
 }
@@ -271,7 +256,6 @@ section{ position:relative; }
   background-size:180% 180%, 160% 160%, 200% 200%;
   animation: meshDrift 18s ease-in-out infinite alternate;
 }
-[data-theme="dark"] .hero::before{ opacity:.7; }
 @keyframes meshDrift{
   0%{ background-position: 0% 0%, 100% 0%, 50% 100%; }
   100%{ background-position: 20% 30%, 80% 25%, 40% 80%; }
@@ -341,7 +325,6 @@ section{ position:relative; }
   display:flex; align-items:center; gap:12px; font-size:.85rem; font-weight:600; color:var(--ink);
   animation:floatSlow 5s ease-in-out infinite;
 }
-[data-theme="dark"] .float-card{ background:rgba(22,33,62,.75); color:#fff; border-color:rgba(255,255,255,.08); }
 .float-card .fc-icon{ width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1rem; }
 .float-card.card-ai{ top:2%; left:-4%; animation-delay:.3s; }
 .float-card.card-ai .fc-icon{ background:linear-gradient(135deg,#2563EB,#60A5FA); }
@@ -358,11 +341,9 @@ section{ position:relative; }
   border:1px solid rgba(255,255,255,.6); border-radius:16px 16px 16px 4px; box-shadow:0 24px 50px -16px rgba(15,23,42,.3);
   animation:floatSlow 7s ease-in-out infinite; animation-delay:.6s;
 }
-[data-theme="dark"] .chat-preview{ background:rgba(22,33,62,.85); border-color:rgba(255,255,255,.08); }
 .chat-preview .cp-head{ display:flex; align-items:center; gap:8px; margin-bottom:8px; }
 .chat-preview .cp-avatar{ width:24px; height:24px; border-radius:50%; background:var(--gradient-primary); display:flex; align-items:center; justify-content:center; color:#fff; font-size:.65rem; }
 .chat-preview .cp-name{ font-size:.72rem; font-weight:700; color:var(--ink); }
-[data-theme="dark"] .chat-preview .cp-name{ color:#fff; }
 .chat-preview .cp-bubble{ background:var(--surface-2); border-radius:10px; padding:8px 10px; font-size:.72rem; color:var(--text-soft); margin-bottom:6px; }
 .chat-preview .cp-dots{ display:flex; gap:4px; padding:8px 10px; background:var(--surface-2); border-radius:10px; width:fit-content; }
 .chat-preview .cp-dots span{ width:5px; height:5px; border-radius:50%; background:var(--primary); animation:typingBounce 1.2s infinite; }
@@ -618,7 +599,6 @@ section{ position:relative; }
   border:1px solid rgba(255,255,255,.6); border-radius:var(--radius-lg); padding:36px 32px; box-shadow:0 20px 50px -20px rgba(15,23,42,.2);
   position:relative; transition:all .4s var(--ease); display:flex; flex-direction:column;
 }
-[data-theme="dark"] .testi-card{ background:rgba(22,33,62,.55); border-color:rgba(255,255,255,.1); }
 .testi-card:hover{ box-shadow:0 30px 70px -20px var(--primary-glow); transform:translateY(-4px); }
 .testi-card i.quote{ color:var(--primary); opacity:.18; font-size:2.2rem; position:absolute; top:24px; right:28px; }
 .testi-stars{ color:#F59E0B; font-size:.85rem; margin-bottom:16px; letter-spacing:2px; }
@@ -1270,7 +1250,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="nav-actions">
       <a href="https://www.instagram.com/mbs_agencyofficial/" target="_blank" rel="noopener" class="nav-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.facebook.com/mbsagencyofficial/" target="_blank" rel="noopener" class="nav-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
       <a href="#contact" class="btn btn-primary nav-cta">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -2023,20 +2002,6 @@ menuOverlay.addEventListener('click', closeMobileMenu);
 document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', closeMobileMenu));
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileMenu(); });
 
-/* ============================================================
-   DARK MODE TOGGLE
-   ============================================================ */
-const themeToggle = document.getElementById('themeToggle');
-const root = document.documentElement;
-function setTheme(theme){
-  root.setAttribute('data-theme', theme);
-  themeToggle.innerHTML = theme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
-}
-setTheme('light');
-themeToggle.addEventListener('click', () => {
-  const current = root.getAttribute('data-theme');
-  setTheme(current === 'dark' ? 'light' : 'dark');
-});
 
 /* ============================================================
    BUTTON RIPPLE EFFECT
