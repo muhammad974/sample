@@ -11,11 +11,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="only light">
-<meta name="supported-color-schemes" content="light">
-<meta name="darkreader-lock">
-<title>MBS Agency — Design. Develop. Automate. | Web Design, Branding & AI Automation</title>
-<meta name="description" content="MBS Agency builds premium websites, brand identities, AI chatbots and business automation that drive real growth for ambitious brands.">
+<title>MBS Agency | Web Development, Video Editing, Google Ads &amp; AI</title>
+<meta name="description" content="MBS Agency is a digital agency offering web development, graphic design, video editing, Google Ads, Meta &amp; TikTok ads, Shopify management and AI automation.">
 
 <style>
 /* ============================================================
@@ -25,7 +22,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
 
 :root{
-  color-scheme: only light;
   /* Brand palette (per brief) */
   --primary: #2563EB;
   --primary-accent: #3B82F6;
@@ -65,6 +61,18 @@ html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
   --transition: .45s var(--ease);
 }
 
+[data-theme="dark"]{
+  --bg: #0B1220;
+  --surface: #101a30;
+  --surface-2: #0d1626;
+  --text: #F1F5F9;
+  --text-soft: #B6C2D9;
+  --text-faint: #6B7C99;
+  --border: rgba(255,255,255,.08);
+  --card-shadow: 0 10px 40px -12px rgba(0,0,0,.55);
+  --nav-bg: rgba(11,18,32,.65);
+  --gray-bg: #0d1626;
+}
 
 body{
   font-family:'Inter',sans-serif;
@@ -150,6 +158,7 @@ section{ position:relative; }
 .logo:hover .logo-badge{ transform:scale(1.05); }
 .logo-badge img{ height:26px; width:auto; display:block; }
 .logo .accent{ color:var(--primary); }
+[data-theme="dark"] .logo{ color:#fff; }
 
 .nav-links{ display:flex; align-items:center; gap:2px; }
 .nav-links a{
@@ -164,6 +173,11 @@ section{ position:relative; }
 .nav-links a:hover::after{ transform:scaleX(1); }
 
 .nav-actions{ display:flex; align-items:center; gap:14px; }
+.theme-toggle{
+  width:40px; height:40px; border-radius:50%; border:1px solid var(--border); display:flex; align-items:center; justify-content:center;
+  color:var(--text-soft); transition: all .3s var(--ease);
+}
+.theme-toggle:hover{ border-color:var(--primary); color:var(--primary); transform:rotate(20deg); }
 
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:8px;
@@ -201,6 +215,7 @@ section{ position:relative; }
   .logo{ font-size:1.15rem; }
   .logo-mark{ width:32px; height:32px; font-size:.85rem; border-radius:9px; }
   .nav-actions{ gap:8px; }
+  .theme-toggle{ width:36px; height:36px; }
   .navbar{ padding:16px 0; }
   .navbar.scrolled{ padding:10px 0; }
 }
@@ -256,6 +271,7 @@ section{ position:relative; }
   background-size:180% 180%, 160% 160%, 200% 200%;
   animation: meshDrift 18s ease-in-out infinite alternate;
 }
+[data-theme="dark"] .hero::before{ opacity:.7; }
 @keyframes meshDrift{
   0%{ background-position: 0% 0%, 100% 0%, 50% 100%; }
   100%{ background-position: 20% 30%, 80% 25%, 40% 80%; }
@@ -325,6 +341,7 @@ section{ position:relative; }
   display:flex; align-items:center; gap:12px; font-size:.85rem; font-weight:600; color:var(--ink);
   animation:floatSlow 5s ease-in-out infinite;
 }
+[data-theme="dark"] .float-card{ background:rgba(22,33,62,.75); color:#fff; border-color:rgba(255,255,255,.08); }
 .float-card .fc-icon{ width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1rem; }
 .float-card.card-ai{ top:2%; left:-4%; animation-delay:.3s; }
 .float-card.card-ai .fc-icon{ background:linear-gradient(135deg,#2563EB,#60A5FA); }
@@ -341,9 +358,11 @@ section{ position:relative; }
   border:1px solid rgba(255,255,255,.6); border-radius:16px 16px 16px 4px; box-shadow:0 24px 50px -16px rgba(15,23,42,.3);
   animation:floatSlow 7s ease-in-out infinite; animation-delay:.6s;
 }
+[data-theme="dark"] .chat-preview{ background:rgba(22,33,62,.85); border-color:rgba(255,255,255,.08); }
 .chat-preview .cp-head{ display:flex; align-items:center; gap:8px; margin-bottom:8px; }
 .chat-preview .cp-avatar{ width:24px; height:24px; border-radius:50%; background:var(--gradient-primary); display:flex; align-items:center; justify-content:center; color:#fff; font-size:.65rem; }
 .chat-preview .cp-name{ font-size:.72rem; font-weight:700; color:var(--ink); }
+[data-theme="dark"] .chat-preview .cp-name{ color:#fff; }
 .chat-preview .cp-bubble{ background:var(--surface-2); border-radius:10px; padding:8px 10px; font-size:.72rem; color:var(--text-soft); margin-bottom:6px; }
 .chat-preview .cp-dots{ display:flex; gap:4px; padding:8px 10px; background:var(--surface-2); border-radius:10px; width:fit-content; }
 .chat-preview .cp-dots span{ width:5px; height:5px; border-radius:50%; background:var(--primary); animation:typingBounce 1.2s infinite; }
@@ -599,6 +618,7 @@ section{ position:relative; }
   border:1px solid rgba(255,255,255,.6); border-radius:var(--radius-lg); padding:36px 32px; box-shadow:0 20px 50px -20px rgba(15,23,42,.2);
   position:relative; transition:all .4s var(--ease); display:flex; flex-direction:column;
 }
+[data-theme="dark"] .testi-card{ background:rgba(22,33,62,.55); border-color:rgba(255,255,255,.1); }
 .testi-card:hover{ box-shadow:0 30px 70px -20px var(--primary-glow); transform:translateY(-4px); }
 .testi-card i.quote{ color:var(--primary); opacity:.18; font-size:2.2rem; position:absolute; top:24px; right:28px; }
 .testi-stars{ color:#F59E0B; font-size:.85rem; margin-bottom:16px; letter-spacing:2px; }
@@ -1158,12 +1178,17 @@ footer::before{
 }
 .port-lightbox.open .port-lightbox-stage video{ opacity:1; transform:scale(1); }
 
+
+/* ===== INTERNAL LINKS (slightly darker, clickable text) ===== */
+.in-link{ color:#1D4ED8; font-weight:600; text-decoration:underline; text-decoration-color:rgba(37,99,235,.35); text-decoration-thickness:1.5px; text-underline-offset:3px; transition:color .25s, text-decoration-color .25s; }
+.in-link:hover{ color:#1E3A8A; text-decoration-color:currentColor; }
+[data-theme="dark"] .in-link{ color:#93C5FD; } [data-theme="dark"] .in-link:hover{ color:#DBEAFE; }
 </style>
 
 <!-- ============================================================
      SEO META TAGS
      ============================================================ -->
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="keywords" content="web design agency, website development, graphic design, AI chatbot, business automation, brand identity, MBS Agency">
 <meta name="author" content="MBS Agency">
 <link rel="canonical" href="https://www.mbsagency.online/">
@@ -1172,45 +1197,27 @@ footer::before{
 <!-- Google Search Console verification —
      replace with the real code shown in Search Console under
      Settings > Ownership verification > HTML tag -->
-<meta name="google-site-verification" content="PASTE_YOUR_VERIFICATION_CODE_HERE">
 
 <!-- Open Graph / Facebook / LinkedIn preview -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.mbsagency.online/">
-<meta property="og:title" content="MBS Agency — Design. Develop. Automate.">
-<meta property="og:description" content="Premium websites, brand identities, AI chatbots and business automation built to drive real growth for ambitious brands.">
+<meta property="og:title" content="MBS Agency | Web Development, Video Editing, Google Ads &amp; AI">
+<meta property="og:description" content="MBS Agency is a digital agency offering web development, graphic design, video editing, Google Ads, Meta &amp; TikTok ads, Shopify management and AI automation.">
 <meta property="og:image" content="https://www.mbsagency.online/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MBS Agency: web development, video editing, Google Ads and AI automation">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="MBS Agency">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://www.mbsagency.online/">
-<meta name="twitter:title" content="MBS Agency — Design. Develop. Automate.">
-<meta name="twitter:description" content="Premium websites, brand identities, AI chatbots and business automation built to drive real growth for ambitious brands.">
+<meta name="twitter:title" content="MBS Agency | Web Development, Video Editing, Google Ads &amp; AI">
+<meta name="twitter:description" content="MBS Agency is a digital agency offering web development, graphic design, video editing, Google Ads, Meta &amp; TikTok ads, Shopify management and AI automation.">
 <meta name="twitter:image" content="https://www.mbsagency.online/og-image.jpg">
 
 <!-- Structured data (JSON-LD) for rich search results -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "MBS Agency",
-  "url": "https://www.mbsagency.online/",
-  "description": "MBS Agency builds premium websites, brand identities, AI chatbots and business automation for ambitious brands.",
-  "email": "mbswebagency@gmail.com",
-  "telephone": "+92-336-1205498",
-  "sameAs": [],
-  "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graphic Design" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Development" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Chatbots" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Automation" } }
-  ]
-}
-</script>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1221,6 +1228,276 @@ footer::before{
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="icon" type="image/png" href="favicon.png">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.mbsagency.online/#organization",
+      "name": "MBS Agency",
+      "url": "https://www.mbsagency.online/",
+      "logo": "https://www.mbsagency.online/favicon.png",
+      "image": "https://www.mbsagency.online/og-image.jpg",
+      "description": "MBS Agency is a digital agency offering web development, graphic design, video editing, Google Ads, Meta and TikTok ads, Shopify management and AI automation.",
+      "email": "mbswebagency@gmail.com",
+      "telephone": "+92-336-1205498",
+      "sameAs": [
+        "https://www.instagram.com/mbs_agencyofficial/",
+        "https://www.facebook.com/mbsagencyofficial/",
+        "https://www.linkedin.com/company/mbsagency/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "MBS Agency Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Graphic Design",
+              "description": "Logos, branding and marketing visuals.",
+              "url": "https://www.mbsagency.online/services.html#graphic-design",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Development",
+              "description": "Fast, responsive websites built to turn visitors into customers.",
+              "url": "https://www.mbsagency.online/services.html#website-development",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Shopify Store Management",
+              "description": "Store setup, upkeep and ongoing support.",
+              "url": "https://www.mbsagency.online/services.html#shopify-store-management",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Video Editing",
+              "description": "Reels, ads and brand videos edited to engage.",
+              "url": "https://www.mbsagency.online/services.html#video-editing",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Social Media Management",
+              "description": "Content, posting and captions handled for you.",
+              "url": "https://www.mbsagency.online/services.html#social-media-management",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI UGC Ads",
+              "description": "AI-generated, creator-style ad content.",
+              "url": "https://www.mbsagency.online/services.html#ai-ugc-ads",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads",
+              "description": "Search ads that reach people already looking for what you sell.",
+              "url": "https://www.mbsagency.online/services.html#google-ads",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta Ads",
+              "description": "Facebook and Instagram ad campaigns.",
+              "url": "https://www.mbsagency.online/services.html#meta-ads",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta Ads Management",
+              "description": "Ongoing optimization and reporting for Meta campaigns.",
+              "url": "https://www.mbsagency.online/services.html#meta-ads-management",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "TikTok Ads",
+              "description": "Short-form ad campaigns built to convert.",
+              "url": "https://www.mbsagency.online/services.html#tiktok-ads",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "TikTok Ads Management",
+              "description": "Ongoing monitoring and optimization of TikTok campaigns.",
+              "url": "https://www.mbsagency.online/services.html#tiktok-ads-management",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Chatbot",
+              "description": "24/7 support, FAQs and lead capture.",
+              "url": "https://www.mbsagency.online/services.html#ai-chatbot",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "WhatsApp Chatbot",
+              "description": "Automated replies right on WhatsApp.",
+              "url": "https://www.mbsagency.online/services.html#whatsapp-chatbot",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Automation",
+              "description": "Workflows that run in the background and save time.",
+              "url": "https://www.mbsagency.online/services.html#ai-automation",
+              "provider": {
+                "@id": "https://www.mbsagency.online/#organization"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.mbsagency.online/#website",
+      "url": "https://www.mbsagency.online/",
+      "name": "MBS Agency",
+      "publisher": {
+        "@id": "https://www.mbsagency.online/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does website development take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most websites launch in 2–4 weeks depending on scope and revisions. See examples in our portfolio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the domain included in the website price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — domain and hosting are billed separately. We're happy to guide you through purchasing and setup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is advertising budget included?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — our fee covers campaign setup and management. Your ad spend on Meta or TikTok is paid directly to the platform and is separate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide social media content?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — our Social Media Management service includes content creation, professional captions, hashtags and daily posting, handled by our team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you create custom AI automation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — AI Automation is scoped and priced around your specific workflow, so we start with a short discovery call."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you manage Shopify stores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — our Shopify Store Management service covers ongoing setup, upkeep and support for your store."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I start a project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Book a call or message us on WhatsApp — we'll discuss your goals and recommend the right services to get started."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1241,15 +1518,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <div class="nav-actions">
       <a href="https://www.instagram.com/mbs_agencyofficial/" target="_blank" rel="noopener" class="nav-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.facebook.com/mbsagencyofficial/" target="_blank" rel="noopener" class="nav-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
       <a href="#contact" class="btn btn-primary nav-cta">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -1264,9 +1542,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="mobile-menu-links">
     <a href="index.html">Home</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#about">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
     <a href="#contact">Contact</a>
     <div class="mobile-menu-social">
       <a href="https://www.instagram.com/mbs_agencyofficial/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -1279,6 +1557,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============================================================
      HERO
      ============================================================ -->
+<main id="main">
 <section class="hero" id="home">
   <div class="blob blob-anim" style="width:520px;height:520px;background:var(--primary);top:-140px;left:-120px;"></div>
   <div class="blob blob-anim" style="width:420px;height:420px;background:#60A5FA;bottom:-160px;right:-100px;animation-delay:3s;"></div>
@@ -1287,10 +1566,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div data-reveal="up">
       <div class="eyebrow"><span class="dot"></span> Design · Develop · Automate</div>
       <h1>We <span class="grad-text">Design</span>, <span class="grad-text">Develop</span> &amp; <span class="grad-text">Automate</span> Businesses for <span class="grad-text">Growth.</span></h1>
-      <p class="lead">From high-converting websites and creative design to AI automation, chatbots and paid advertising — we build digital solutions that help businesses grow.</p>
+      <p class="lead">From high-converting <a class="in-link" href="services.html#website-development">websites</a> and <a class="in-link" href="services.html#graphic-design">creative design</a> to <a class="in-link" href="services.html#ai-automation">AI automation</a>, <a class="in-link" href="services.html#ai-chatbot">chatbots</a> and <a class="in-link" href="services.html#ads">paid advertising</a> — we build digital solutions that help businesses grow.</p>
       <div class="hero-btns">
         <a href="#contact" class="btn btn-primary magnetic">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#portfolio" class="btn btn-outline magnetic">View Our Work</a>
+        <a href="portfolio.html" class="btn btn-outline magnetic">View Our Work</a>
       </div>
       <div class="hero-service-line">Websites &nbsp;•&nbsp; Design &nbsp;•&nbsp; AI &nbsp;•&nbsp; Automation &nbsp;•&nbsp; Ads &nbsp;•&nbsp; Social Media</div>
       <div class="hero-trust">
@@ -1347,70 +1626,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ============================================================
-     SERVICES
-     ============================================================ -->
-<section class="services section-pad" id="services">
-  <div class="container">
-    <div class="sec-head" data-reveal="up">
-      <div class="eyebrow"><span class="dot"></span> What We Do</div>
-      <h2>Full-Stack Growth, <span class="grad-text">Under One Roof</span></h2>
-      <p>From your first sketch to your smartest automation — every service is built to compound your growth.</p>
-    </div>
-
-    <div class="svc-categories stagger">
-
-      <div class="svc-category" data-reveal="up" style="--i:0">
-        <div class="svc-cat-head">
-          <div class="svc-cat-icon"><i class="fa-solid fa-pen-ruler"></i></div>
-          <h3>Design &amp; Development</h3>
-        </div>
-        <ul class="svc-mini-list">
-          <li><i class="fa-solid fa-palette"></i><div><strong>Graphic Design</strong><span>Logos, branding &amp; marketing visuals.</span></div></li>
-          <li><i class="fa-solid fa-code"></i><div><strong>Website Development</strong><span>Fast, responsive sites built to convert.</span></div></li>
-          <li><i class="fa-brands fa-shopify"></i><div><strong>Shopify Store Management</strong><span>Ongoing setup, upkeep &amp; store support.</span></div></li>
-        </ul>
-      </div>
-
-      <div class="svc-category" data-reveal="up" style="--i:1">
-        <div class="svc-cat-head">
-          <div class="svc-cat-icon"><i class="fa-solid fa-robot"></i></div>
-          <h3>AI &amp; Automation</h3>
-        </div>
-        <ul class="svc-mini-list">
-          <li><i class="fa-solid fa-comments"></i><div><strong>AI Chatbot</strong><span>24/7 support, FAQs &amp; lead capture.</span></div></li>
-          <li><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp Chatbot</strong><span>Automated replies right on WhatsApp.</span></div></li>
-          <li><i class="fa-solid fa-gears"></i><div><strong>AI Automation</strong><span>Workflows that run quietly in the background.</span></div></li>
-          <li><i class="fa-solid fa-clapperboard"></i><div><strong>AI UGC Ads</strong><span>AI-generated creator-style ad content.</span></div></li>
-        </ul>
-      </div>
-
-      <div class="svc-category" data-reveal="up" style="--i:2">
-        <div class="svc-cat-head">
-          <div class="svc-cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
-          <h3>Paid Advertising</h3>
-        </div>
-        <ul class="svc-mini-list">
-          <li><i class="fa-brands fa-facebook"></i><div><strong>Meta Ads</strong><span>Facebook &amp; Instagram ad campaigns.</span></div></li>
-          <li><i class="fa-solid fa-chart-line"></i><div><strong>Meta Ads Management</strong><span>Ongoing optimization &amp; reporting.</span></div></li>
-          <li><i class="fa-brands fa-tiktok"></i><div><strong>TikTok Ads</strong><span>Short-form ad campaigns built to convert.</span></div></li>
-          <li><i class="fa-solid fa-chart-simple"></i><div><strong>TikTok Ads Management</strong><span>Ongoing monitoring &amp; optimization.</span></div></li>
-        </ul>
-      </div>
-
-      <div class="svc-category" data-reveal="up" style="--i:3">
-        <div class="svc-cat-head">
-          <div class="svc-cat-icon"><i class="fa-solid fa-hashtag"></i></div>
-          <h3>Social Media</h3>
-        </div>
-        <ul class="svc-mini-list">
-          <li><i class="fa-solid fa-photo-film"></i><div><strong>Social Media Management</strong><span>Content, posting &amp; captions, handled for you.</span></div></li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ============================================================
      CLIENTS WE'VE WORKED WITH
@@ -1430,25 +1645,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </section>
 
-<!-- ============================================================
-     PORTFOLIO
-     ============================================================ -->
-<section class="section-pad" id="portfolio">
-  <div class="container">
-    <div class="sec-head" data-reveal="up">
-      <div class="eyebrow"><span class="dot"></span> Our Work</div>
-      <h2>Real Projects. <span class="grad-text">Real Businesses.</span></h2>
-      <p>A look at the work we've created for growing brands.</p>
-    </div>
-
-    <!-- DEV NOTE: portfolio content now lives in the `portfolioProjects` data array inside the
-         inline script block near the end of this file (search for "PORTFOLIO DATA"). To replace the
-         Unsplash placeholders with real project photos, just edit the `images` arrays there —
-         add, remove or swap URLs. Nothing else in this file needs to change; the cards, carousels
-         and layout are all generated automatically from that data. -->
-    <div class="portfolio-slider-grid stagger" id="portfolioGrid"></div>
-  </div>
-</section>
 
 <!-- ============================================================
      WHY CHOOSE US
@@ -1461,12 +1657,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2>Why Businesses <span class="grad-text">Choose MBS</span></h2>
       <p>One agency. Multiple digital solutions. Built around your business goals.</p>
     </div>
-    <p class="about-intro">MBS Agency is a digital agency helping businesses with design, websites, AI, automation, advertising, social media and e-commerce &mdash; all handled by one team, so nothing falls through the cracks between different vendors. We focus on practical, working solutions that move your business forward, not just a nice-looking deliverable.</p>
+    <p class="about-intro">MBS Agency is a <a class="in-link" href="about.html">digital agency</a> helping businesses with <a class="in-link" href="services.html#graphic-design">design</a>, <a class="in-link" href="services.html#website-development">websites</a>, AI, <a class="in-link" href="services.html#ai-automation">automation</a>, <a class="in-link" href="services.html#ads">advertising</a>, <a class="in-link" href="services.html#social-media-management">social media</a> and <a class="in-link" href="services.html#shopify-store-management">e-commerce</a> &mdash; all handled by one team, so nothing falls through the cracks between different vendors. We focus on practical, working solutions that move your business forward, not just a nice-looking deliverable.</p>
     <div class="why-grid why-grid-4 stagger">
-      <div class="why-card" data-reveal="up" style="--i:0"><div class="why-icon"><i class="fa-solid fa-palette"></i></div><h3>Creative</h3><p>Design that makes your brand stand out.</p></div>
-      <div class="why-card" data-reveal="up" style="--i:1"><div class="why-icon"><i class="fa-solid fa-code"></i></div><h3>Digital</h3><p>Websites and e-commerce solutions built for businesses.</p></div>
-      <div class="why-card" data-reveal="up" style="--i:2"><div class="why-icon"><i class="fa-solid fa-robot"></i></div><h3>AI-Powered</h3><p>Chatbots and automation that streamline your business.</p></div>
+      <div class="why-card" data-reveal="up" style="--i:0"><div class="why-icon"><i class="fa-solid fa-palette"></i></div><h3>Creative</h3><p><a class="in-link" href="services.html#graphic-design">Design</a> that makes your brand stand out.</p></div>
+      <div class="why-card" data-reveal="up" style="--i:1"><div class="why-icon"><i class="fa-solid fa-code"></i></div><h3>Digital</h3><p><a class="in-link" href="services.html#website-development">Websites</a> and <a class="in-link" href="services.html#shopify-store-management">e-commerce</a> solutions built for businesses.</p></div>
+      <div class="why-card" data-reveal="up" style="--i:2"><div class="why-icon"><i class="fa-solid fa-robot"></i></div><h3>AI-Powered</h3><p><a class="in-link" href="services.html#ai-chatbot">Chatbots</a> and <a class="in-link" href="services.html#ai-automation">automation</a> that streamline your business.</p></div>
       <div class="why-card" data-reveal="up" style="--i:3"><div class="why-icon"><i class="fa-solid fa-chart-line"></i></div><h3>Growth-Focused</h3><p>Digital marketing built around your business goals.</p></div>
+    </div>
+    <div data-reveal="up" style="text-align:center; margin-top:48px;">
+      <a href="about.html" class="btn btn-outline">More About Us <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -1615,105 +1814,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ============================================================
-     PRICING
-     ============================================================ -->
-<section class="section-pad" id="pricing" style="background:var(--surface-2);">
-  <div class="container">
-    <div class="sec-head" data-reveal="up">
-      <div class="eyebrow"><span class="dot"></span> Pricing</div>
-      <h2>Simple Pricing. <span class="grad-text">Clear Services.</span></h2>
-      <p>Choose the services your business needs. For custom requirements, talk to our team.</p>
-    </div>
-
-    <div class="svc-price-group" data-reveal="up">
-      <h3 class="svc-price-cat-title"><i class="fa-solid fa-pen-ruler"></i> Design &amp; Development</h3>
-      <div class="svc-price-grid stagger">
-        <div class="svc-price-card" data-reveal="up" style="--i:0">
-          <div class="svc-price-name">Graphic Design</div>
-          <div class="svc-price-amt">Custom Pricing</div>
-          <p class="svc-price-desc">Scoped to your logo, branding or campaign needs.</p>
-          <a href="#contact" class="btn btn-outline btn-sm">Talk to Us <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:1">
-          <div class="svc-price-name">Website Development</div>
-          <div class="svc-price-amt">Rs. 9,999</div>
-          <p class="svc-price-desc">A responsive, professional business website.</p>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card featured" data-reveal="up" style="--i:2">
-          <div class="svc-price-badge">Popular</div>
-          <div class="svc-price-name">Social Media Management</div>
-          <div class="svc-price-amt">Rs. 15,000<span>/month</span></div>
-          <ul class="svc-price-features">
-            <li><i class="fa-solid fa-circle-check"></i> 30 social media posts</li>
-            <li><i class="fa-solid fa-circle-check"></i> Daily posting</li>
-            <li><i class="fa-solid fa-circle-check"></i> Content provided by MBS Agency</li>
-            <li><i class="fa-solid fa-circle-check"></i> Professional captions &amp; hashtags</li>
-            <li><i class="fa-solid fa-circle-check"></i> Posting handled by our team</li>
-          </ul>
-          <a href="#contact" class="btn btn-white btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:3">
-          <div class="svc-price-name">Shopify Store Management</div>
-          <div class="svc-price-amt">Rs. 5,000<span>/month</span></div>
-          <p class="svc-price-desc">Ongoing setup, upkeep and store support.</p>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="svc-price-group" data-reveal="up">
-      <h3 class="svc-price-cat-title"><i class="fa-solid fa-robot"></i> AI &amp; Automation</h3>
-      <div class="svc-price-grid stagger">
-        <div class="svc-price-card" data-reveal="up" style="--i:0">
-          <div class="svc-price-name">AI Chatbot</div>
-          <div class="svc-price-amt">Rs. 6,000</div>
-          <p class="svc-price-desc">A trained website chatbot for support &amp; leads.</p>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:1">
-          <div class="svc-price-name">WhatsApp Chatbot</div>
-          <div class="svc-price-amt">Rs. 6,000</div>
-          <p class="svc-price-desc">Automated replies right on WhatsApp.</p>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:2">
-          <div class="svc-price-name">AI Automation</div>
-          <div class="svc-price-amt">Custom Pricing</div>
-          <p class="svc-price-desc">Workflows scoped to your business needs.</p>
-          <a href="#contact" class="btn btn-outline btn-sm">Talk to Us <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:3">
-          <div class="svc-price-name">AI UGC Ads</div>
-          <div class="svc-price-amt">Rs. 500<span>/ad</span></div>
-          <p class="svc-price-desc">Also available as 12 AI UGC ads for Rs. 5,000.</p>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="svc-price-group" data-reveal="up">
-      <h3 class="svc-price-cat-title"><i class="fa-solid fa-bullhorn"></i> Paid Advertising</h3>
-      <div class="svc-price-grid stagger">
-        <div class="svc-price-card" data-reveal="up" style="--i:0">
-          <div class="svc-price-name">Meta Ads Campaign</div>
-          <div class="svc-price-amt">Rs. 2,500<span>/campaign</span></div>
-          <p class="svc-price-desc">Set up, launch &amp; regularly monitor performance.</p>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:1">
-          <div class="svc-price-name">TikTok Ads Campaign</div>
-          <div class="svc-price-amt">Rs. 3,000<span>/campaign</span></div>
-          <p class="svc-price-desc">Set up, launch &amp; regularly monitor performance.</p>
-          <a href="#contact" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-      <p class="svc-price-note"><i class="fa-solid fa-circle-info"></i> Advertising budget is separate. Campaign performance is monitored regularly — results are not guaranteed.</p>
-    </div>
-
-  </div>
-</section>
 
 <!-- ============================================================
      FAQ
@@ -1728,7 +1828,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="faq-wrap" data-reveal="up">
       <div class="faq-item active">
         <div class="faq-q"><span>How long does website development take?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>Most websites launch in 2–4 weeks depending on scope and revisions.</p></div>
+        <div class="faq-a"><p>Most <a class="in-link" href="services.html#website-development">websites</a> launch in 2–4 weeks depending on scope and revisions. See examples in our <a class="in-link" href="portfolio.html">portfolio</a>.</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Is the domain included in the website price?</span><i class="fa-solid fa-plus"></i></div>
@@ -1736,19 +1836,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Is advertising budget included?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>No — our fee covers campaign setup and management. Your ad spend on Meta or TikTok is paid directly to the platform and is separate.</p></div>
+        <div class="faq-a"><p>No — our fee covers campaign setup and management. Your ad spend on <a class="in-link" href="services.html#meta-ads">Meta</a> or <a class="in-link" href="services.html#tiktok-ads">TikTok</a> is paid directly to the platform and is separate.</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Do you provide social media content?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>Yes — our Social Media Management service includes content creation, professional captions, hashtags and daily posting, handled by our team.</p></div>
+        <div class="faq-a"><p>Yes — our <a class="in-link" href="services.html#social-media-management">Social Media Management</a> service includes content creation, professional captions, hashtags and daily posting, handled by our team.</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Can you create custom AI automation?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>Yes — AI Automation is scoped and priced around your specific workflow, so we start with a short discovery call.</p></div>
+        <div class="faq-a"><p>Yes — <a class="in-link" href="services.html#ai-automation">AI Automation</a> is scoped and priced around your specific workflow, so we start with a short discovery call.</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Do you manage Shopify stores?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>Yes — our Shopify Store Management service covers ongoing setup, upkeep and support for your store.</p></div>
+        <div class="faq-a"><p>Yes — our <a class="in-link" href="services.html#shopify-store-management">Shopify Store Management</a> service covers ongoing setup, upkeep and support for your store.</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>How do I start a project?</span><i class="fa-solid fa-plus"></i></div>
@@ -1854,6 +1954,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============================================================
      FOOTER
      ============================================================ -->
+</main>
 <footer>
   <div class="container footer-top">
     <div class="footer-left">
@@ -1861,10 +1962,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="footer-tagline">Design. Develop. Automate.</p>
       <nav class="footer-nav">
         <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="#about">Why MBS</a>
-        <a href="#about">About</a>
+        <a href="about.html">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -1898,16 +1999,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  
 
 <!-- Portfolio image lightbox — opens when any portfolio carousel image is clicked -->
-<div class="port-lightbox" id="portLightbox">
-  <button class="port-lightbox-close" id="portLightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-  <button class="port-lightbox-arrow port-lightbox-prev" id="portLightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
-  <div class="port-lightbox-stage">
-    <img id="portLightboxImg" src="" alt="">
-    <video id="portLightboxVideo" controls playsinline style="display:none;"></video>
-    <div class="port-lightbox-caption" id="portLightboxCaption"></div>
-  </div>
-  <button class="port-lightbox-arrow port-lightbox-next" id="portLightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
-</div>
+
 
 <script>
 /* ============================================================
@@ -2002,6 +2094,20 @@ menuOverlay.addEventListener('click', closeMobileMenu);
 document.querySelectorAll('.mobile-menu a').forEach(a => a.addEventListener('click', closeMobileMenu));
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileMenu(); });
 
+/* ============================================================
+   DARK MODE TOGGLE
+   ============================================================ */
+const themeToggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+function setTheme(theme){
+  root.setAttribute('data-theme', theme);
+  themeToggle.innerHTML = theme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+}
+setTheme('light');
+themeToggle.addEventListener('click', () => {
+  const current = root.getAttribute('data-theme');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+});
 
 /* ============================================================
    BUTTON RIPPLE EFFECT
@@ -2095,7 +2201,6 @@ filterBtns.forEach(btn => {
     });
   });
 });
-
 
 
 /* ============================================================
@@ -2246,257 +2351,8 @@ document.getElementById('backToTop').addEventListener('click', () => {
    ============================================================ */
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-<script>
-/* ============================================================
-   PORTFOLIO DATA — edit this array to replace placeholder images
-   ============================================================
-   Each project has: client, description, services (tags), and an
-   images array. These are currently temporary Unsplash placeholder
-   photos chosen to visually match each business type — NOT actual
-   client work. To swap in real project photos, just replace the
-   URLs inside `images` (add, remove or reorder as many as you like)
-   — the cards, carousels, arrows/dots and layout below are all
-   generated automatically from this data, so nothing else needs
-   to change.
-   ============================================================ */
-const portfolioProjects = [
-  {
-    client: "Burger Star",
-    description: "Restaurant Growth & Digital Presence",
-    services: ["Social Media", "Graphic Design", "AI UGC", "Website"],
-    images: [
-      "assets/images/portfolio/burger-star/1.jpg", "assets/images/portfolio/burger-star/2.jpg", "assets/images/portfolio/burger-star/3.jpg", "assets/images/portfolio/burger-star/4.jpg", "assets/images/portfolio/burger-star/5.jpg"
-    ]
-  },
-  {
-    client: "Dry Delights",
-    description: "E-commerce & Brand Growth",
-    services: ["Graphic Design", "E-commerce", "Shopify", "Social Media"],
-    images: [
-      "assets/videos/portfolio/dry-delights/reel-1.mp4",
-      "assets/images/portfolio/dry-delights/1.jpg", "assets/images/portfolio/dry-delights/2.jpg", "assets/images/portfolio/dry-delights/3.jpg", "assets/images/portfolio/dry-delights/4.jpg"
-    ]
-  },
-  {
-    client: "Zamana",
-    description: "Website SEO",
-    services: ["Website", "SEO"],
-    images: [
-      "assets/images/portfolio/zamana/1.jpg"
-    ]
-  },
-  {
-    client: "Novatools",
-    description: "AI Ad",
-    services: ["Graphic Design", "Website"],
-    images: [
-      "assets/videos/portfolio/novatools/ai-ad.mp4"
-    ]
-  },
-  {
-    client: "Scenturies",
-    description: "Premium E-commerce Brand",
-    services: ["AI UGC", "Graphic Design", "E-commerce", "Social Media"],
-    images: [
-      "assets/images/portfolio/scenturies/1.jpg", "assets/images/portfolio/scenturies/2.jpg", "assets/images/portfolio/scenturies/3.jpg", "assets/images/portfolio/scenturies/4.jpg"
-    ]
-  },
-  {
-    client: "Waseem Women's Boutique",
-    description: "Fashion & E-commerce",
-    services: ["Graphic Design", "Social Media"],
-    images: [
-      "assets/images/portfolio/waseem-boutique/1.jpg", "assets/images/portfolio/waseem-boutique/2.jpg", "assets/images/portfolio/waseem-boutique/3.jpg"
-    ]
-  },
-];
 
-(function renderPortfolio(){
-  const grid = document.getElementById('portfolioGrid');
-  if (!grid) return;
-  function isVideo(src){
-    return src.indexOf('data:video') === 0 || /\.(mp4|webm|mov)(\?|$)/i.test(src);
-  }
-  grid.innerHTML = portfolioProjects.map(function(p, i){
-    const slides = p.images.map(function(src){
-      if (isVideo(src)){
-        return '<div class="port-slide port-slide-video">' +
-                 '<video src="' + src + '" muted loop autoplay playsinline preload="metadata"></video>' +
-                 '<div class="port-play-badge"><i class="fa-solid fa-play"></i></div>' +
-               '</div>';
-      }
-      return '<div class="port-slide"><img src="' + src + '" alt="' + p.client + ' project photo" loading="lazy"></div>';
-    }).join('');
-    const tags = p.services.map(function(s){ return '<span>' + s + '</span>'; }).join('');
-    return (
-      '<div class="port-card in-view">' +
-        '<div class="port-slider">' +
-          '<div class="port-slider-track">' + slides + '</div>' +
-          '<button class="port-arrow port-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>' +
-          '<button class="port-arrow port-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>' +
-          '<div class="port-dots"></div>' +
-        '</div>' +
-        '<div class="port-card-body">' +
-          '<h3>' + p.client + '</h3>' +
-          '<p>' + p.description + '</p>' +
-          '<div class="port-tags">' + tags + '</div>' +
-          '<a href="#contact" class="port-view-btn">View Project <i class="fa-solid fa-arrow-right"></i></a>' +
-        '</div>' +
-      '</div>'
-    );
-  }).join('');
-})();
-</script>
-<script>
-/* ============================================================
-   PORTFOLIO SLIDERS — prev/next, dots, swipe, autoslide
-   (kept separate from script.js so it's easy to spot/verify)
-   ============================================================ */
-(function initPortSliders(){
-  document.querySelectorAll('.port-slider').forEach(function(slider){
-    var track = slider.querySelector('.port-slider-track');
-    var slides = Array.prototype.slice.call(track.children);
-    var prevBtn = slider.querySelector('.port-prev');
-    var nextBtn = slider.querySelector('.port-next');
-    var dotsWrap = slider.querySelector('.port-dots');
-    var idx = 0;
-    var autoTimer = null;
 
-    // Only one slide right now (placeholder logo) — hide controls until more images are added.
-    if (slides.length <= 1) {
-      if (prevBtn) prevBtn.style.display = 'none';
-      if (nextBtn) nextBtn.style.display = 'none';
-      if (dotsWrap) dotsWrap.style.display = 'none';
-      return;
-    }
-
-    slides.forEach(function(_, i){
-      var dot = document.createElement('button');
-      dot.className = 'port-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
-      dot.addEventListener('click', function(){ goTo(i); restartAuto(); });
-      dotsWrap.appendChild(dot);
-    });
-    var dots = Array.prototype.slice.call(dotsWrap.children);
-
-    function goTo(i){
-      idx = (i + slides.length) % slides.length;
-      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
-      dots.forEach(function(d, di){ d.classList.toggle('active', di === idx); });
-    }
-    function startAuto(){ autoTimer = setInterval(function(){ goTo(idx + 1); }, 4500); }
-    function stopAuto(){ if (autoTimer) clearInterval(autoTimer); }
-    function restartAuto(){ stopAuto(); startAuto(); }
-
-    if (prevBtn) prevBtn.addEventListener('click', function(){ goTo(idx - 1); restartAuto(); });
-    if (nextBtn) nextBtn.addEventListener('click', function(){ goTo(idx + 1); restartAuto(); });
-    slider.addEventListener('mouseenter', stopAuto);
-    slider.addEventListener('mouseleave', startAuto);
-
-    // touch swipe
-    var touchStartX = 0;
-    track.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; stopAuto(); }, {passive:true});
-    track.addEventListener('touchend', function(e){
-      var dx = e.changedTouches[0].clientX - touchStartX;
-      if (dx > 40) goTo(idx - 1);
-      else if (dx < -40) goTo(idx + 1);
-      startAuto();
-    }, {passive:true});
-
-    startAuto();
-  });
-})();
-</script>
-<script>
-/* ============================================================
-   PORTFOLIO IMAGE LIGHTBOX
-   Click any portfolio carousel image to open it full-size with
-   its own prev/next navigation through that project's images.
-   Uses event delegation on #portfolioGrid so it works even though
-   the cards are rendered dynamically from portfolioProjects.
-   ============================================================ */
-(function initPortLightbox(){
-  const grid = document.getElementById('portfolioGrid');
-  const lightbox = document.getElementById('portLightbox');
-  if (!grid || !lightbox) return;
-
-  const imgEl = document.getElementById('portLightboxImg');
-  const videoEl = document.getElementById('portLightboxVideo');
-  const captionEl = document.getElementById('portLightboxCaption');
-  const closeBtn = document.getElementById('portLightboxClose');
-  const prevBtn = document.getElementById('portLightboxPrev');
-  const nextBtn = document.getElementById('portLightboxNext');
-
-  function isVideo(src){
-    return src.indexOf('data:video') === 0 || /\.(mp4|webm|mov)(\?|$)/i.test(src);
-  }
-
-  let currentImages = [];
-  let currentIndex = 0;
-  let currentClient = '';
-
-  function show(i){
-    currentIndex = (i + currentImages.length) % currentImages.length;
-    const src = currentImages[currentIndex];
-    videoEl.pause();
-    if (isVideo(src)){
-      imgEl.style.display = 'none';
-      videoEl.style.display = '';
-      videoEl.style.opacity = '0';
-      videoEl.src = src;
-      videoEl.currentTime = 0;
-      requestAnimationFrame(function(){ videoEl.style.opacity = '1'; });
-    } else {
-      videoEl.style.display = 'none';
-      videoEl.removeAttribute('src');
-      imgEl.style.display = '';
-      imgEl.style.opacity = '0';
-      imgEl.src = src;
-      imgEl.alt = currentClient + ' — image ' + (currentIndex + 1) + ' of ' + currentImages.length;
-      requestAnimationFrame(function(){ imgEl.style.opacity = '1'; });
-    }
-    captionEl.textContent = currentClient + '  ·  ' + (currentIndex + 1) + ' / ' + currentImages.length;
-  }
-
-  function open(images, startIndex, client){
-    currentImages = images;
-    currentClient = client;
-    show(startIndex);
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function close(){
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-    videoEl.pause();
-  }
-
-  grid.addEventListener('click', function(e){
-    const media = e.target.closest('.port-slide img, .port-slide video');
-    if (!media) return;
-    const card = media.closest('.port-card');
-    if (!card) return;
-    const project = portfolioProjects[Array.prototype.indexOf.call(grid.children, card)];
-    if (!project) return;
-    const slideEl = media.closest('.port-slide');
-    const track = card.querySelector('.port-slider-track');
-    const idx = Array.prototype.indexOf.call(track.children, slideEl);
-    open(project.images, idx, project.client);
-  });
-
-  closeBtn.addEventListener('click', close);
-  lightbox.addEventListener('click', function(e){ if (e.target === lightbox) close(); });
-  prevBtn.addEventListener('click', function(){ show(currentIndex - 1); });
-  nextBtn.addEventListener('click', function(){ show(currentIndex + 1); });
-  document.addEventListener('keydown', function(e){
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') show(currentIndex - 1);
-    if (e.key === 'ArrowRight') show(currentIndex + 1);
-  });
-})();
-</script>
 <script>
 /* ============================================================
    TESTIMONIAL CAROUSEL — multi-card, seamless infinite loop
