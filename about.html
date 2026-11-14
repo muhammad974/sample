@@ -14,8 +14,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="color-scheme" content="only light">
 <meta name="supported-color-schemes" content="light">
 <meta name="darkreader-lock">
-<title>About MBS Agency | Web, Ads, Video &amp; AI Digital Agency</title>
-<meta name="description" content="MBS Agency is a digital agency that designs websites, runs Google, Meta and TikTok ads, edits video and builds AI automation for growing brands.">
+<title>About MBS Agency | Digital Marketing Agency in Karachi</title>
+<meta name="description" content="MBS Agency is a Karachi-based digital marketing agency offering website development, Shopify management, social media marketing, ads and AI automation for growing brands.">
 
 <style>
 /* ============================================================
@@ -1250,6 +1250,51 @@ footer::before{
 .in-link{ color:#1D4ED8; font-weight:600; text-decoration:underline; text-decoration-color:rgba(37,99,235,.35); text-decoration-thickness:1.5px; text-underline-offset:3px; transition:color .25s, text-decoration-color .25s; }
 .in-link:hover{ color:#1E3A8A; text-decoration-color:currentColor; }
 [data-theme="dark"] .in-link{ color:#93C5FD; } [data-theme="dark"] .in-link:hover{ color:#DBEAFE; }
+/* ===== SERVICES PAGE ===== */
+.svc-chips{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:76px; }
+.svc-chips a{ padding:10px 22px; border-radius:var(--radius-full); border:1.5px solid var(--border); font-weight:600; font-size:.88rem; transition:all .3s var(--ease); }
+.svc-chips a:hover{ border-color:var(--primary); color:var(--primary); transform:translateY(-3px); }
+.svc-block{ margin-bottom:96px; scroll-margin-top:110px; }
+.svc-block:last-child{ margin-bottom:0; }
+.svc-block-head{ display:flex; align-items:center; gap:18px; margin-bottom:34px; }
+.svc-block-head h2{ font-size:clamp(1.6rem,3vw,2.2rem); }
+.svc-block-head p{ color:var(--text-soft); margin-top:4px; max-width:56ch; }
+.svc-bi{ width:60px; height:60px; flex:none; border-radius:18px; background:var(--gradient-primary); color:#fff; display:grid; place-items:center; font-size:1.5rem; box-shadow:0 10px 26px -8px var(--primary-glow); }
+.svc-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+.svc-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:32px 28px; display:flex; flex-direction:column; transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s; }
+.svc-card:hover{ transform:translateY(-8px); border-color:var(--primary); box-shadow:0 28px 56px -22px var(--primary-glow); }
+.svc-ic{ width:52px; height:52px; border-radius:15px; background:rgba(37,99,235,.1); color:var(--primary); display:grid; place-items:center; font-size:1.25rem; margin-bottom:20px; transition:all .4s var(--ease); }
+.svc-card:hover .svc-ic{ background:var(--gradient-primary); color:#fff; transform:rotate(-6deg) scale(1.08); }
+.svc-card h3{ font-size:1.2rem; margin-bottom:10px; }
+.svc-card > p{ color:var(--text-soft); font-size:.92rem; margin-bottom:18px; }
+.svc-card ul{ list-style:none; display:grid; gap:9px; margin-bottom:26px; }
+.svc-card li{ position:relative; padding-left:24px; font-size:.88rem; color:var(--text-soft); }
+.svc-card li::before{ content:"\f00c"; font-family:"Font Awesome 6 Free"; font-weight:900; position:absolute; left:0; top:2px; color:var(--primary); font-size:.72rem; }
+.svc-link{ margin-top:auto; display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:.9rem; color:var(--primary); }
+.svc-link i{ transition:transform .3s var(--ease); }
+.svc-card:hover .svc-link i{ transform:translateX(5px); }
+@media(max-width:1000px){ .svc-cards{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:640px){ .svc-cards{ grid-template-columns:1fr; } .svc-block-head{ align-items:flex-start; } }
+
+/* ===== ABOUT PAGE SECTIONS ===== */
+.ab-sec{ padding:96px 0; } .ab-alt{ background:var(--surface-2); }
+.ab-head{ max-width:700px; margin:0 auto 52px; text-align:center; }
+.ab-head h2{ font-size:clamp(1.9rem,3.6vw,2.8rem); }
+.ab-head p{ color:var(--text-soft); margin-top:14px; }
+.ab-text{ max-width:820px; margin:0 auto; text-align:center; font-size:1.12rem; color:var(--text-soft); }
+.ab-text + .ab-text{ margin-top:18px; }
+.ab-more{ text-align:center; margin-top:30px; }
+.ab-steps{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
+.ab-step{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:28px 22px; transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s; }
+.ab-step:hover{ transform:translateY(-8px); border-color:var(--primary); box-shadow:0 28px 56px -22px var(--primary-glow); }
+.ab-num{ width:46px; height:46px; border-radius:50%; background:var(--gradient-primary); color:#fff; display:grid; place-items:center; font:700 1.05rem 'Poppins',sans-serif; margin-bottom:18px; box-shadow:0 8px 20px -6px var(--primary-glow); }
+.ab-step h3{ font-size:1.15rem; margin-bottom:8px; }
+.ab-step p{ font-size:.9rem; color:var(--text-soft); }
+.svc-cards.two{ grid-template-columns:repeat(2,1fr); }
+.svc-card > p{ margin-bottom:22px; }
+@media(max-width:1100px){ .ab-steps{ grid-template-columns:repeat(3,1fr); } }
+@media(max-width:700px){ .ab-steps{ grid-template-columns:repeat(2,1fr); } .svc-cards.two{ grid-template-columns:1fr; } }
+@media(max-width:480px){ .ab-steps{ grid-template-columns:1fr; } }
 </style>
 
 <!-- SEO META TAGS -->
@@ -1259,16 +1304,16 @@ footer::before{
 <meta name="theme-color" content="#2563EB">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.mbsagency.online/about.html">
-<meta property="og:title" content="About MBS Agency | Web, Ads, Video &amp; AI Digital Agency">
-<meta property="og:description" content="MBS Agency is a digital agency that designs websites, runs Google, Meta and TikTok ads, edits video and builds AI automation for growing brands.">
+<meta property="og:title" content="About MBS Agency | Digital Marketing Agency in Karachi">
+<meta property="og:description" content="MBS Agency is a Karachi-based digital marketing agency offering website development, Shopify management, social media marketing, ads and AI automation for growing brands.">
 <meta property="og:image" content="https://www.mbsagency.online/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="About MBS Agency, a digital agency for web, ads, video and AI">
+<meta property="og:image:alt" content="MBS Agency, a digital marketing agency in Karachi">
 <meta property="og:site_name" content="MBS Agency">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About MBS Agency | Web, Ads, Video &amp; AI Digital Agency">
-<meta name="twitter:description" content="MBS Agency is a digital agency that designs websites, runs Google, Meta and TikTok ads, edits video and builds AI automation for growing brands.">
+<meta name="twitter:title" content="About MBS Agency | Digital Marketing Agency in Karachi">
+<meta name="twitter:description" content="MBS Agency is a Karachi-based digital marketing agency offering website development, Shopify management, social media marketing, ads and AI automation for growing brands.">
 <meta name="twitter:image" content="https://www.mbsagency.online/og-image.jpg">
 
 <!-- Google Fonts -->
@@ -1294,7 +1339,8 @@ footer::before{
       },
       "about": {
         "@id": "https://www.mbsagency.online/#organization"
-      }
+      },
+      "description": "MBS Agency is a Karachi-based digital marketing agency offering website development, Shopify management, social media marketing, ads and AI automation for growing brands."
     },
     {
       "@type": "BreadcrumbList",
@@ -1339,13 +1385,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="services.html">Services</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="about.html" class="active" aria-current="page">About</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
     <div class="nav-actions">
       <a href="https://www.instagram.com/mbs_agencyofficial/" target="_blank" rel="noopener" class="nav-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.facebook.com/mbsagencyofficial/" target="_blank" rel="noopener" class="nav-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="index.html#contact" class="btn btn-primary nav-cta">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="contact.html" class="btn btn-primary nav-cta">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -1362,12 +1408,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="services.html">Services</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html" class="active" aria-current="page">About</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="contact.html">Contact</a>
     <div class="mobile-menu-social">
       <a href="https://www.instagram.com/mbs_agencyofficial/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.facebook.com/mbsagencyofficial/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
     </div>
-    <a href="index.html#contact" class="btn btn-primary">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
+    <a href="contact.html" class="btn btn-primary">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
   </div>
 </div>
 
@@ -1382,10 +1428,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container hero-grid">
     <div data-reveal="up">
       <div class="eyebrow"><span class="dot"></span> About MBS Agency</div>
-      <h1>We Help <span class="grad-text">Businesses</span> <span class="grad-text">Grow Online.</span></h1>
-      <p class="lead">MBS Agency is a digital agency that <a class="in-link" href="services.html#website-development">designs websites</a>, <a class="in-link" href="services.html#ads">runs ads</a> and builds <a class="in-link" href="services.html#ai-automation">AI automation</a> for growing brands — one team, one goal: your growth.</p>
+      <h1>About MBS <span class="grad-text">Agency:</span> A Digital Marketing <span class="grad-text">Agency in Karachi</span></h1>
+      <p class="lead">MBS Agency is a Karachi-based digital marketing agency that helps small and growing businesses build a strong online presence. We <a class="in-link" href="services.html#website-development">design websites</a>, <a class="in-link" href="services.html#shopify-store-management">manage Shopify stores</a>, run social media and <a class="in-link" href="services.html#ads">paid ads</a>, <a class="in-link" href="services.html#video-editing">edit video content</a> and build <a class="in-link" href="services.html#ai-chatbot">AI chatbots and automation</a>, all under one roof.</p>
       <div class="hero-btns">
-        <a href="index.html#contact" class="btn btn-primary magnetic">Work With Us <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-primary magnetic">Work With Us <i class="fa-solid fa-arrow-right"></i></a>
         <a href="portfolio.html" class="btn btn-outline magnetic">View Our Work</a>
       </div>
       <div class="hero-service-line">Websites &nbsp;•&nbsp; Design &nbsp;•&nbsp; AI &nbsp;•&nbsp; Automation &nbsp;•&nbsp; Ads &nbsp;•&nbsp; Social Media</div>
@@ -1446,6 +1492,124 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============================================================
      FOOTER
      ============================================================ -->
+
+<!-- ============================================================
+     ABOUT CONTENT
+     ============================================================ -->
+<section class="ab-sec" id="story">
+  <div class="container">
+    <p class="ab-text" data-reveal="up">We started with a simple idea: most businesses don’t need five different vendors, they need one reliable team that understands their goals. Today we work remotely with clients in Pakistan and around the world.</p>
+    <!-- OUR STORY: add your own 3-4 lines here (why you started MBS Agency, what problem you saw, your first projects).
+         Example markup:
+         <h2>Our Story</h2><p class="ab-text">...</p> -->
+  </div>
+</section>
+
+<section class="ab-sec ab-alt" id="what-we-do">
+  <div class="container">
+    <div class="ab-head" data-reveal="up"><h2>What We Do</h2><p>Everything your business needs to get online and grow, handled by one team. See the full list on our <a class="in-link" href="services.html">services page</a>.</p></div>
+    <div class="svc-cards">
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-code"></i></div>
+          <h3>Website Development</h3>
+          <p>Fast, mobile-friendly business websites built to turn visitors into customers.</p>
+          <a class="svc-link" href="services.html#website-development" aria-label="Learn more about Website Development">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-brands fa-shopify"></i></div>
+          <h3>Shopify Store Management</h3>
+          <p>Store setup, product management, theme customization and ongoing support.</p>
+          <a class="svc-link" href="services.html#shopify-store-management" aria-label="Learn more about Shopify Store Management">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-photo-film"></i></div>
+          <h3>Social Media Marketing</h3>
+          <p>Content planning, designs, captions and daily posting for Instagram, Facebook and TikTok.</p>
+          <a class="svc-link" href="services.html#social-media-management" aria-label="Learn more about Social Media Management">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3>Paid Advertising</h3>
+          <p>Meta, TikTok and Google Ads campaigns that are set up, tracked and optimized.</p>
+          <a class="svc-link" href="services.html#ads" aria-label="Learn more about Paid Advertising">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-palette"></i></div>
+          <h3>Graphic Design and Video Editing</h3>
+          <p>Logos, branding, reels and ad creatives.</p>
+          <a class="svc-link" href="services.html#graphic-design" aria-label="Learn more about Graphic Design and Video Editing">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-robot"></i></div>
+          <h3>AI Chatbots and Automation</h3>
+          <p>Website and WhatsApp chatbots that answer customers and capture leads 24/7.</p>
+          <a class="svc-link" href="services.html#ai-chatbot" aria-label="Learn more about AI Chatbots and Automation">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+    </div>
+  </div>
+</section>
+
+<section class="ab-sec" id="who-we-work-with">
+  <div class="container">
+    <div class="ab-head" data-reveal="up"><h2>Who We Work With</h2></div>
+    <p class="ab-text" data-reveal="up">We have worked with businesses across food, fashion, fragrances, kids’ products, events and retail, including Burger Star, Dry Delights, Scenturies, Zamana, Waseem Women’s Boutique and The Her Gallery. Whether you are launching a new brand or growing an existing one, we shape our work around your business, not a template.</p>
+    <p class="ab-more" data-reveal="up"><a class="btn btn-outline" href="portfolio.html">See Our Work <i class="fa-solid fa-arrow-right"></i></a></p>
+  </div>
+</section>
+
+<section class="ab-sec ab-alt" id="how-we-work">
+  <div class="container">
+    <div class="ab-head" data-reveal="up"><h2>How We Work</h2><p>A simple five-step process, from the first call to ongoing growth.</p></div>
+    <div class="ab-steps">
+        <div class="ab-step" data-reveal="up"><div class="ab-num">1</div><h3>Discover</h3><p>We learn about your business, audience and goals.</p></div>
+        <div class="ab-step" data-reveal="up"><div class="ab-num">2</div><h3>Strategize</h3><p>We plan the right solution and budget.</p></div>
+        <div class="ab-step" data-reveal="up"><div class="ab-num">3</div><h3>Build</h3><p>We design, develop and create your project.</p></div>
+        <div class="ab-step" data-reveal="up"><div class="ab-num">4</div><h3>Launch</h3><p>We test, refine and go live.</p></div>
+        <div class="ab-step" data-reveal="up"><div class="ab-num">5</div><h3>Grow</h3><p>We track results and keep improving.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ab-sec" id="why-mbs">
+  <div class="container">
+    <div class="ab-head" data-reveal="up"><h2>Why Businesses Choose MBS Agency</h2></div>
+    <div class="svc-cards two">
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>One team for everything</h3>
+          <p>Design, development, ads and AI in one place, so nothing falls between vendors.</p>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-tags"></i></div>
+          <h3>Clear pricing</h3>
+          <p>Our <a class="in-link" href="services.html">packages are listed openly</a>, with no hidden surprises.</p>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-comments"></i></div>
+          <h3>Direct communication</h3>
+          <p>You talk to the people actually doing the work, and we reply within one business day.</p>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Practical results</h3>
+          <p>We focus on what helps your business grow, not just a nice-looking deliverable.</p>
+        </article>
+    </div>
+  </div>
+</section>
+
+<!-- MEET THE TEAM: add founder/team photos with name, role and one line each, then place the section here. -->
+
+<section style="padding:20px 0 120px;">
+  <div class="cta-band" data-reveal="scale">
+    <h2>Let’s Work Together</h2>
+    <p>Ready to grow your business online? Book a call or message us on WhatsApp, and we’ll recommend the right services for your goals.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-white">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="https://wa.me/923361205498" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(255,255,255,.5); color:#fff;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
 </main>
 <footer>
   <div class="container footer-top">
@@ -1458,7 +1622,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="portfolio.html">Portfolio</a>
         <a href="index.html#about">Why MBS</a>
         <a href="about.html">About</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
     <div class="footer-right">
