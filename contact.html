@@ -1313,6 +1313,30 @@ footer::before{
 .ct-faq details[open] summary::after{ transform:rotate(45deg); }
 .ct-faq details p{ padding:0 24px 22px; color:var(--text-soft); }
 .hp-field{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+/* ===== SERVICES DROPDOWN ===== */
+.nav-item{ position:relative; display:flex; align-items:center; }
+.nav-item > a .chev{ font-size:.6rem; margin-left:6px; transition:transform .3s var(--ease); }
+.nav-item:hover > a .chev, .nav-item:focus-within > a .chev{ transform:rotate(180deg); }
+.dropdown{ position:absolute; top:100%; left:0; min-width:280px; padding-top:14px; opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s var(--ease), transform .25s var(--ease), visibility .25s; z-index:1100; }
+.dropdown-inner{ background:var(--surface); border:1px solid var(--border); border-radius:16px; box-shadow:0 26px 54px -20px rgba(15,23,42,.28); padding:8px; }
+.nav-item:hover .dropdown, .nav-item:focus-within .dropdown{ opacity:1; visibility:visible; transform:none; }
+.nav-links .dropdown a{ display:block; padding:11px 14px; border-radius:10px; font-size:.9rem; font-weight:500; color:var(--text); }
+.nav-links .dropdown a::after{ display:none; }
+.nav-links .dropdown a:hover{ background:rgba(37,99,235,.08); color:var(--primary); }
+.nav-links .dropdown a.dd-all{ margin-top:6px; border-top:1px solid var(--border); border-radius:0 0 10px 10px; font-weight:700; color:var(--primary); }
+.mm-group{ display:flex; flex-direction:column; }
+.mm-row{ display:flex; align-items:center; justify-content:space-between; }
+.mm-arrow{ width:44px; height:44px; display:grid; place-items:center; color:var(--text-soft); }
+.mm-arrow i{ transition:transform .3s var(--ease); }
+.mm-group.open .mm-arrow i{ transform:rotate(180deg); }
+.mm-sub{ display:none; flex-direction:column; padding:2px 0 8px 16px; border-left:2px solid var(--border); margin-left:4px; }
+.mm-group.open .mm-sub{ display:flex; }
+.mobile-menu .mm-sub a{ font-size:.95rem; padding:9px 0; }
+.footer-services{ margin-top:18px; }
+.footer-services nav{ display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:10px; max-width:560px; }
+.footer-services a{ font-size:.82rem; color:rgba(255,255,255,.65); }
+.footer-services a:hover{ color:#fff; }
 </style>
 
 <!-- SEO META TAGS -->
@@ -1437,7 +1461,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <div class="nav-item has-dropdown"><a href="services.html" aria-haspopup="true">Services <i class="fa-solid fa-chevron-down chev"></i></a><div class="dropdown"><div class="dropdown-inner"><a href="website-developer-karachi.html">Website Development</a><a href="shopify-developer-karachi.html">Shopify Store Management</a><a href="social-media-marketing-karachi.html">Social Media Marketing</a><a href="meta-ads-management-karachi.html">Meta &amp; TikTok Ads</a><a href="google-ads-management-karachi.html">Google Ads</a><a href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Chatbots &amp; Automation</a><a href="graphic-design-video-editing-karachi.html">Graphic Design &amp; Video Editing</a><a href="services.html" class="dd-all">All Services</a></div></div></div>
       <a href="portfolio.html">Portfolio</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="active" aria-current="page">Contact</a>
@@ -1460,7 +1484,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="mobile-menu-links">
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
+    <div class="mm-group"><div class="mm-row"><a href="services.html">Services</a><button class="mm-arrow" type="button" aria-label="Show service pages" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button></div><div class="mm-sub"><a href="website-developer-karachi.html">Website Development</a><a href="shopify-developer-karachi.html">Shopify Store Management</a><a href="social-media-marketing-karachi.html">Social Media Marketing</a><a href="meta-ads-management-karachi.html">Meta &amp; TikTok Ads</a><a href="google-ads-management-karachi.html">Google Ads</a><a href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Chatbots &amp; Automation</a><a href="graphic-design-video-editing-karachi.html">Graphic Design &amp; Video Editing</a><a href="services.html" class="dd-all">All Services</a></div></div>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About</a>
     <a href="contact.html" class="active" aria-current="page">Contact</a>
@@ -1649,19 +1673,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="svc-ic"><i class="fa-solid fa-code"></i></div>
           <h3>Website Development</h3>
           <p>Business websites from Rs. 9,999.</p>
-          <a class="svc-link" href="services.html#website-development" aria-label="Learn more about Website Development">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="svc-link" href="website-developer-karachi.html" aria-label="Learn more about Website Development">Learn more <i class="fa-solid fa-arrow-right"></i></a>
         </article>
         <article class="svc-card" data-reveal="up">
           <div class="svc-ic"><i class="fa-brands fa-shopify"></i></div>
           <h3>Shopify Store Management</h3>
           <p>Setup, upkeep and support.</p>
-          <a class="svc-link" href="services.html#shopify-store-management" aria-label="Learn more about Shopify Store Management">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="svc-link" href="shopify-developer-karachi.html" aria-label="Learn more about Shopify Store Management">Learn more <i class="fa-solid fa-arrow-right"></i></a>
         </article>
         <article class="svc-card" data-reveal="up">
           <div class="svc-ic"><i class="fa-solid fa-photo-film"></i></div>
           <h3>Social Media Marketing</h3>
           <p>Content, designs and daily posting.</p>
-          <a class="svc-link" href="services.html#social-media-management" aria-label="Learn more about Social Media Marketing">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="svc-link" href="social-media-marketing-karachi.html" aria-label="Learn more about Social Media Marketing">Learn more <i class="fa-solid fa-arrow-right"></i></a>
         </article>
         <article class="svc-card" data-reveal="up">
           <div class="svc-ic"><i class="fa-solid fa-bullhorn"></i></div>
@@ -1673,7 +1697,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="svc-ic"><i class="fa-solid fa-robot"></i></div>
           <h3>AI Chatbots and Automation</h3>
           <p>Website and WhatsApp chatbots.</p>
-          <a class="svc-link" href="services.html#ai-chatbot" aria-label="Learn more about AI Chatbots and Automation">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+          <a class="svc-link" href="ai-chatbot-whatsapp-chatbot-pakistan.html" aria-label="Learn more about AI Chatbots and Automation">Learn more <i class="fa-solid fa-arrow-right"></i></a>
         </article>
     </div>
     <p class="ct-note" data-reveal="up">See all our <a class="in-link" href="services.html">services and pricing</a>, or browse our <a class="in-link" href="portfolio.html">portfolio</a> to see our recent work.</p>
@@ -1718,6 +1742,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <div class="footer-services"><div class="footer-find-us">Services</div><nav aria-label="Services"><a href="website-developer-karachi.html">Website Development</a><a href="shopify-developer-karachi.html">Shopify Store Management</a><a href="social-media-marketing-karachi.html">Social Media Marketing</a><a href="meta-ads-management-karachi.html">Meta &amp; TikTok Ads</a><a href="google-ads-management-karachi.html">Google Ads</a><a href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Chatbots &amp; Automation</a><a href="graphic-design-video-editing-karachi.html">Graphic Design &amp; Video Editing</a><a href="services.html">All Services</a></nav></div>
     </div>
     <div class="footer-right">
       <div class="footer-find-us">Find Us Here</div>
@@ -1919,6 +1944,17 @@ if (typeof emailjs !== 'undefined'){ emailjs.init({ publicKey: EMAILJS_PUBLIC_KE
   });
   ['fname','femail','fmessage'].forEach(id => { const el = $(id); if (el) el.addEventListener('input', () => setErr(id + 'Group', false)); });
 })();
+</script>
+
+<script>
+/* Mobile menu: the arrow next to "Services" opens the service links */
+document.querySelectorAll('.mm-arrow').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var g = btn.closest('.mm-group'), open = g.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
 </script>
 </body>
 </html>

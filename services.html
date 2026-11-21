@@ -14,8 +14,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="color-scheme" content="only light">
 <meta name="supported-color-schemes" content="light">
 <meta name="darkreader-lock">
-<title>Web Development, Video Editing &amp; Google Ads | MBS Agency</title>
-<meta name="description" content="MBS Agency offers web development, graphic design, video editing, Google Ads, Meta &amp; TikTok ads, Shopify management and AI chatbots. Get started today.">
+<title>Digital Marketing Services &amp; Pricing in Karachi | MBS Agency</title>
+<meta name="description" content="Websites, Shopify, social media, Meta &amp; TikTok ads, Google Ads, video editing and AI chatbots in Karachi. See MBS Agency's services and pricing. Book a call.">
 
 <style>
 /* ============================================================
@@ -1266,6 +1266,10 @@ footer::before{
 .svc-card ul{ list-style:none; display:grid; gap:9px; margin-bottom:26px; }
 .svc-card li{ position:relative; padding-left:24px; font-size:.88rem; color:var(--text-soft); }
 .svc-card li::before{ content:"\f00c"; font-family:"Font Awesome 6 Free"; font-weight:900; position:absolute; left:0; top:2px; color:var(--primary); font-size:.72rem; }
+.svc-links{ margin-top:auto; display:flex; gap:20px; flex-wrap:wrap; }
+.svc-links .svc-link{ margin-top:0; }
+.svc-links .svc-alt{ color:var(--text-soft); }
+.svc-links .svc-alt:hover{ color:var(--primary); }
 .svc-link{ margin-top:auto; display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:.9rem; color:var(--primary); }
 .svc-link i{ transition:transform .3s var(--ease); }
 .svc-card:hover .svc-link i{ transform:translateX(5px); }
@@ -1278,6 +1282,112 @@ footer::before{
 [data-theme="dark"] .in-link{ color:#93C5FD; } [data-theme="dark"] .in-link:hover{ color:#DBEAFE; }
 .svc-intro{ text-align:center; max-width:720px; margin:0 auto 30px; color:var(--text-soft); font-size:1.02rem; }
 .svc-card{ scroll-margin-top:110px; }
+
+/* ===== SERVICES DROPDOWN ===== */
+.nav-item{ position:relative; display:flex; align-items:center; }
+.nav-item > a .chev{ font-size:.6rem; margin-left:6px; transition:transform .3s var(--ease); }
+.nav-item:hover > a .chev, .nav-item:focus-within > a .chev{ transform:rotate(180deg); }
+.dropdown{ position:absolute; top:100%; left:0; min-width:280px; padding-top:14px; opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s var(--ease), transform .25s var(--ease), visibility .25s; z-index:1100; }
+.dropdown-inner{ background:var(--surface); border:1px solid var(--border); border-radius:16px; box-shadow:0 26px 54px -20px rgba(15,23,42,.28); padding:8px; }
+.nav-item:hover .dropdown, .nav-item:focus-within .dropdown{ opacity:1; visibility:visible; transform:none; }
+.nav-links .dropdown a{ display:block; padding:11px 14px; border-radius:10px; font-size:.9rem; font-weight:500; color:var(--text); }
+.nav-links .dropdown a::after{ display:none; }
+.nav-links .dropdown a:hover{ background:rgba(37,99,235,.08); color:var(--primary); }
+.nav-links .dropdown a.dd-all{ margin-top:6px; border-top:1px solid var(--border); border-radius:0 0 10px 10px; font-weight:700; color:var(--primary); }
+.mm-group{ display:flex; flex-direction:column; }
+.mm-row{ display:flex; align-items:center; justify-content:space-between; }
+.mm-arrow{ width:44px; height:44px; display:grid; place-items:center; color:var(--text-soft); }
+.mm-arrow i{ transition:transform .3s var(--ease); }
+.mm-group.open .mm-arrow i{ transform:rotate(180deg); }
+.mm-sub{ display:none; flex-direction:column; padding:2px 0 8px 16px; border-left:2px solid var(--border); margin-left:4px; }
+.mm-group.open .mm-sub{ display:flex; }
+.mobile-menu .mm-sub a{ font-size:.95rem; padding:9px 0; }
+.footer-services{ margin-top:18px; }
+.footer-services nav{ display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:10px; max-width:560px; }
+.footer-services a{ font-size:.82rem; color:rgba(255,255,255,.65); }
+.footer-services a:hover{ color:#fff; }
+
+/* ===== PRICING ON SERVICES PAGE (3 cards per group) ===== */
+.svc-price-grid{ grid-template-columns:repeat(3,1fr); }
+@media(max-width:1000px){ .svc-price-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:640px){ .svc-price-grid{ grid-template-columns:1fr; } }
+
+/* ===== ABOUT PAGE SECTIONS ===== */
+.ab-sec{ padding:96px 0; } .ab-alt{ background:var(--surface-2); }
+.ab-head{ max-width:700px; margin:0 auto 52px; text-align:center; }
+.ab-head h2{ font-size:clamp(1.9rem,3.6vw,2.8rem); }
+.ab-head p{ color:var(--text-soft); margin-top:14px; }
+.ab-text{ max-width:820px; margin:0 auto; text-align:center; font-size:1.12rem; color:var(--text-soft); }
+.ab-text + .ab-text{ margin-top:18px; }
+.ab-more{ text-align:center; margin-top:30px; }
+.ab-steps{ display:grid; grid-template-columns:repeat(5,1fr); gap:20px; }
+.ab-step{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:28px 22px; transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s; }
+.ab-step:hover{ transform:translateY(-8px); border-color:var(--primary); box-shadow:0 28px 56px -22px var(--primary-glow); }
+.ab-num{ width:46px; height:46px; border-radius:50%; background:var(--gradient-primary); color:#fff; display:grid; place-items:center; font:700 1.05rem 'Poppins',sans-serif; margin-bottom:18px; box-shadow:0 8px 20px -6px var(--primary-glow); }
+.ab-step h3{ font-size:1.15rem; margin-bottom:8px; }
+.ab-step p{ font-size:.9rem; color:var(--text-soft); }
+.svc-cards.two{ grid-template-columns:repeat(2,1fr); }
+.svc-card > p{ margin-bottom:22px; }
+@media(max-width:1100px){ .ab-steps{ grid-template-columns:repeat(3,1fr); } }
+@media(max-width:700px){ .ab-steps{ grid-template-columns:repeat(2,1fr); } .svc-cards.two{ grid-template-columns:1fr; } }
+@media(max-width:480px){ .ab-steps{ grid-template-columns:1fr; } }
+
+
+/* ===== CONTACT PAGE ===== */
+.ct-btns{ display:flex; gap:12px; flex-wrap:wrap; margin:28px 0 8px; }
+.ct-form-title{ font-size:clamp(1.6rem,3vw,2.1rem); margin-bottom:18px; }
+#send-message{ scroll-margin-top:110px; }
+.ab-steps.four{ grid-template-columns:repeat(4,1fr); }
+@media(max-width:1000px){ .ab-steps.four{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:480px){ .ab-steps.four{ grid-template-columns:1fr; } }
+.ct-note{ text-align:center; margin-top:34px; color:var(--text-soft); }
+.ct-faq{ max-width:820px; margin:0 auto; display:grid; gap:14px; }
+.ct-faq details{ background:var(--surface); border:1px solid var(--border); border-radius:18px; transition:border-color .3s, box-shadow .3s; }
+.ct-faq details[open]{ border-color:var(--primary); box-shadow:0 18px 40px -22px var(--primary-glow); }
+.ct-faq summary{ cursor:pointer; list-style:none; padding:20px 24px; font:600 1.02rem 'Poppins',sans-serif; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.ct-faq summary::-webkit-details-marker{ display:none; }
+.ct-faq summary::after{ content:"+"; font-size:1.6rem; line-height:1; color:var(--primary); transition:transform .3s var(--ease); }
+.ct-faq details[open] summary::after{ transform:rotate(45deg); }
+.ct-faq details p{ padding:0 24px 22px; color:var(--text-soft); }
+.hp-field{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+
+
+/* ===== WEBSITE DEVELOPER PAGE ===== */
+.wd-list{ list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:14px 24px; max-width:920px; margin:0 auto; }
+.wd-list li{ position:relative; padding:18px 20px 18px 56px; background:var(--surface); border:1px solid var(--border); border-radius:16px; color:var(--text-soft); font-size:.97rem; }
+.wd-list li::before{ content:"\f00c"; font-family:"Font Awesome 6 Free"; font-weight:900; position:absolute; left:18px; top:50%; transform:translateY(-50%); width:26px; height:26px; border-radius:50%; background:var(--gradient-primary); color:#fff; display:grid; place-items:center; font-size:.7rem; }
+.ct-table{ width:100%; max-width:760px; margin:0 auto; border-collapse:separate; border-spacing:0; border:1px solid var(--border); border-radius:18px; overflow:hidden; background:var(--surface); }
+.ct-table th, .ct-table td{ padding:20px 26px; text-align:left; }
+.ct-table th{ background:var(--surface-2); font-family:'Poppins',sans-serif; font-size:.95rem; }
+.ct-table td{ border-top:1px solid var(--border); color:var(--text-soft); }
+.ct-table td:last-child{ font-weight:700; color:var(--primary); }
+.svc-cards.four{ grid-template-columns:repeat(4,1fr); }
+@media(max-width:1100px){ .svc-cards.four{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:640px){ .svc-cards.four{ grid-template-columns:1fr; } }
+.wd-center{ text-align:center; margin-top:30px; }
+.wd-launch{ text-align:center; margin-top:34px; color:var(--text-soft); font-weight:500; }
+@media(max-width:700px){ .wd-list{ grid-template-columns:1fr; } .ct-table th, .ct-table td{ padding:16px 18px; } }
+
+
+/* ===== ADS PAGE ===== */
+.ab-steps.six{ grid-template-columns:repeat(3,1fr); }
+@media(max-width:1000px){ .ab-steps.six{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:560px){ .ab-steps.six{ grid-template-columns:1fr; } }
+.ab-sub{ text-align:center; font-size:1.15rem; margin:38px 0 18px; }
+.svc-links{ margin-top:auto; display:flex; gap:20px; flex-wrap:wrap; }
+.svc-links .svc-link{ margin-top:0; }
+.svc-links .svc-alt{ color:var(--text-soft); }
+.svc-links .svc-alt:hover{ color:var(--primary); }
+.ads-note{ max-width:760px; margin:26px auto 0; padding:18px 22px; border-radius:16px; background:rgba(37,99,235,.07); border:1px solid rgba(37,99,235,.18); color:var(--text-soft); font-size:.95rem; }
+.ads-note strong{ color:var(--text); }
+
+
+/* ===== SERVICES PAGE v2 ===== */
+.svc-pricetag{ margin:0 0 18px; font-weight:700; color:var(--primary); font-size:.95rem; padding-top:14px; border-top:1px solid var(--border); }
+.svc-pricetag span{ color:var(--text-soft); font-weight:500; }
+.svc-card ul{ margin-bottom:18px; }
+.svc-note{ max-width:760px; margin:26px auto 0; text-align:center; color:var(--text-soft); font-size:.93rem; }
+.svc-block-head p a{ white-space:nowrap; }
 </style>
 
 <!-- SEO META TAGS -->
@@ -1287,16 +1397,16 @@ footer::before{
 <meta name="theme-color" content="#2563EB">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.mbsagency.online/services.html">
-<meta property="og:title" content="Web Development, Video Editing &amp; Google Ads | MBS Agency">
-<meta property="og:description" content="MBS Agency offers web development, graphic design, video editing, Google Ads, Meta &amp; TikTok ads, Shopify management and AI chatbots. Get started today.">
+<meta property="og:title" content="Digital Marketing Services &amp; Pricing in Karachi | MBS Agency">
+<meta property="og:description" content="Websites, Shopify, social media, Meta &amp; TikTok ads, Google Ads, video editing and AI chatbots in Karachi. See MBS Agency's services and pricing. Book a call.">
 <meta property="og:image" content="https://www.mbsagency.online/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="MBS Agency services: web development, video editing, Google Ads and AI">
+<meta property="og:image:alt" content="MBS Agency services and pricing in Karachi">
 <meta property="og:site_name" content="MBS Agency">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Web Development, Video Editing &amp; Google Ads | MBS Agency">
-<meta name="twitter:description" content="MBS Agency offers web development, graphic design, video editing, Google Ads, Meta &amp; TikTok ads, Shopify management and AI chatbots. Get started today.">
+<meta name="twitter:title" content="Digital Marketing Services &amp; Pricing in Karachi | MBS Agency">
+<meta name="twitter:description" content="Websites, Shopify, social media, Meta &amp; TikTok ads, Google Ads, video editing and AI chatbots in Karachi. See MBS Agency's services and pricing. Book a call.">
 <meta name="twitter:image" content="https://www.mbsagency.online/og-image.jpg">
 
 <!-- Google Fonts -->
@@ -1316,7 +1426,7 @@ footer::before{
       "@type": "CollectionPage",
       "@id": "https://www.mbsagency.online/services.html#page",
       "url": "https://www.mbsagency.online/services.html",
-      "name": "MBS Agency Services",
+      "name": "Digital Marketing Services and Pricing in Karachi",
       "isPartOf": {
         "@id": "https://www.mbsagency.online/#website"
       },
@@ -1527,6 +1637,67 @@ footer::before{
           "item": "https://www.mbsagency.online/services.html"
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a website cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our business website package starts from Rs. 9,999. Domain and hosting are billed separately, and larger projects are quoted after a short discussion. See our website developer service in Karachi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the ad budget included in your price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Our fee covers campaign setup and management. Your ad spend is paid directly to Meta, TikTok or Google. See our Meta and TikTok ads service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in social media management?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Content planning, 30 posts per month, daily posting, professional captions and hashtags, for Rs. 12,000 per month. See our social media marketing service."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I combine services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many clients combine a website with social media and ads. Tell us what you need and we will suggest a package."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a website take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most websites launch in 2 to 4 weeks, depending on scope and revisions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with businesses outside Karachi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We work remotely with clients across Pakistan and internationally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Book a call or message us on WhatsApp."
+          }
+        }
+      ]
     }
   ]
 }
@@ -1551,7 +1722,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="services.html" class="active" aria-current="page">Services</a>
+      <div class="nav-item has-dropdown"><a href="services.html" class="active" aria-current="page" aria-haspopup="true">Services <i class="fa-solid fa-chevron-down chev"></i></a><div class="dropdown"><div class="dropdown-inner"><a href="website-developer-karachi.html">Website Development</a><a href="shopify-developer-karachi.html">Shopify Store Management</a><a href="social-media-marketing-karachi.html">Social Media Marketing</a><a href="meta-ads-management-karachi.html">Meta &amp; TikTok Ads</a><a href="google-ads-management-karachi.html">Google Ads</a><a href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Chatbots &amp; Automation</a><a href="graphic-design-video-editing-karachi.html">Graphic Design &amp; Video Editing</a><a href="services.html" class="dd-all">All Services</a></div></div></div>
       <a href="portfolio.html">Portfolio</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -1574,7 +1745,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="mobile-menu-links">
     <a href="index.html">Home</a>
-    <a href="services.html" class="active" aria-current="page">Services</a>
+    <div class="mm-group"><div class="mm-row"><a href="services.html" class="active" aria-current="page">Services</a><button class="mm-arrow" type="button" aria-label="Show service pages" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button></div><div class="mm-sub"><a href="website-developer-karachi.html">Website Development</a><a href="shopify-developer-karachi.html">Shopify Store Management</a><a href="social-media-marketing-karachi.html">Social Media Marketing</a><a href="meta-ads-management-karachi.html">Meta &amp; TikTok Ads</a><a href="google-ads-management-karachi.html">Google Ads</a><a href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Chatbots &amp; Automation</a><a href="graphic-design-video-editing-karachi.html">Graphic Design &amp; Video Editing</a><a href="services.html" class="dd-all">All Services</a></div></div>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -1597,8 +1768,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container hero-grid">
     <div data-reveal="up">
       <div class="eyebrow"><span class="dot"></span> Our Services</div>
-      <h1>Everything You Need to <span class="grad-text">Grow</span> <span class="grad-text">Online.</span></h1>
-      <p class="lead">From <a class="in-link" href="#website-development">websites</a> and <a class="in-link" href="#graphic-design">design</a> to <a class="in-link" href="#video-editing">video editing</a>, <a class="in-link" href="#google-ads">Google Ads</a> and <a class="in-link" href="#ai-automation">AI automation</a> — every service your business needs, handled by <a class="in-link" href="about.html">one team</a>.</p>
+      <h1>Digital Marketing Services in <span class="grad-text">Karachi</span></h1>
+      <p class="lead"><a class="in-link" href="about.html">MBS Agency</a> gives growing businesses one team for everything they need online: <a class="in-link" href="website-developer-karachi.html">websites</a>, design, video, <a class="in-link" href="social-media-marketing-karachi.html">social media</a>, <a class="in-link" href="meta-ads-management-karachi.html">paid ads</a> and AI automation. Pick a service below, check the pricing, or <a class="in-link" href="contact.html">talk to us</a> and we will recommend the right mix for your goals.</p>
       <div class="hero-btns">
         <a href="contact.html" class="btn btn-primary magnetic">Get Started <i class="fa-solid fa-arrow-right"></i></a>
         <a href="portfolio.html" class="btn btn-outline magnetic">View Our Work</a>
@@ -1659,13 +1830,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ============================================================
+     PRICING AT A GLANCE
+     ============================================================ -->
+<section class="ab-sec ab-alt" id="pricing">
+  <div class="container">
+    <nav class="svc-chips" aria-label="Service categories" style="margin-bottom:56px;"><a href="#design">Design &amp; Development</a><a href="#video">Video &amp; Content</a><a href="#ads">Paid Advertising</a><a href="#ai">AI &amp; Automation</a></nav>
+    <div class="ab-head" data-reveal="up"><h2>Pricing at a Glance</h2></div>
+    <table class="ct-table" data-reveal="up">
+      <thead><tr><th scope="col">Service</th><th scope="col">Starting price</th></tr></thead>
+      <tbody>
+        <tr><td><a class="in-link" href="#website-development">Website development</a></td><td>From Rs. 9,999</td></tr>
+        <tr><td><a class="in-link" href="#social-media-management">Social media management</a></td><td>Rs. 12,000 per month</td></tr>
+        <tr><td><a class="in-link" href="#meta-ads">Meta Ads campaign setup</a></td><td>Rs. 2,500 per campaign</td></tr>
+        <tr><td><a class="in-link" href="#tiktok-ads">TikTok Ads campaign setup</a></td><td>Rs. 3,000 per campaign</td></tr>
+        <tr><td><a class="in-link" href="#ai-ugc-ads">AI UGC ads</a></td><td>Rs. 500 per ad, or 12 ads for Rs. 5,000</td></tr>
+        <tr><td><a class="in-link" href="#graphic-design">Graphic design</a></td><td>Custom quote</td></tr>
+        <tr><td><a class="in-link" href="#video-editing">Video editing</a></td><td>Custom quote</td></tr>
+        <tr><td><a class="in-link" href="#shopify-store-management">Shopify store management</a></td><td>Rs. 5,000 per month</td></tr>
+        <tr><td><a class="in-link" href="#google-ads">Google Ads</a></td><td>Custom quote</td></tr>
+        <tr><td><a class="in-link" href="#ai-chatbot">AI chatbot / WhatsApp chatbot</a></td><td>Rs. 6,000 each</td></tr>
+        <tr><td><a class="in-link" href="#ai-automation">AI automation</a></td><td>Custom quote</td></tr>
+      </tbody>
+    </table>
+    <p class="ab-text" data-reveal="up" style="margin-top:28px;font-size:1rem;">Domain and hosting are billed separately. Ad spend on Meta, TikTok or Google is paid directly to the platform and is not included in our fee. Not sure what you need? Tell us your budget and we will suggest what is realistic.</p>
+  </div>
+</section>
+
+<!-- ============================================================
      SERVICES
      ============================================================ -->
 <section class="svc-page section-pad" id="services">
   <div class="container">
-    <p class="svc-intro">Pick a service below, see the results in our <a class="in-link" href="portfolio.html">portfolio</a>, or <a class="in-link" href="about.html">learn about our team</a>. Not sure where to start? <a class="in-link" href="contact.html">Talk to us</a> and we will recommend the right mix.</p>
-    <nav class="svc-chips" aria-label="Service categories"><a href="#design">Design &amp; Development</a><a href="#video">Video &amp; Content</a><a href="#ads">Paid Advertising</a><a href="#ai">AI &amp; Automation</a></nav>
-
     <div class="svc-block" id="design">
       <div class="svc-block-head" data-reveal="up">
         <div class="svc-bi"><i class="fa-solid fa-pen-ruler"></i></div>
@@ -1676,22 +1871,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="svc-ic"><i class="fa-solid fa-palette"></i></div>
           <h3>Graphic Design</h3>
           <p>Logos, branding and marketing visuals that make your business look professional.</p>
-          <ul><li>Logo &amp; brand identity</li><li>Social media &amp; ad creatives</li><li>Flyers, banners &amp; marketing material</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with Graphic Design">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Logo and brand identity</li><li>Social media and ad creatives</li><li>Flyers, banners and marketing material</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Custom quote</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with Graphic Design">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="graphic-design-video-editing-karachi.html" aria-label="Graphic design and video editing in Karachi">Design &amp; video in Karachi <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="website-development" data-reveal="up">
           <div class="svc-ic"><i class="fa-solid fa-code"></i></div>
           <h3>Website Development</h3>
           <p>Fast, responsive websites built to turn visitors into customers.</p>
-          <ul><li>Custom, mobile-first design</li><li>SEO-ready structure</li><li>Speed &amp; performance optimization</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with Website Development">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Custom, mobile-first design</li><li>SEO-ready structure</li><li>Speed and performance optimization</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> From Rs. 9,999 <span>(domain and hosting separate)</span></div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with Website Development">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="website-developer-karachi.html" aria-label="Website developer in Karachi">Website developer in Karachi <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="shopify-store-management" data-reveal="up">
           <div class="svc-ic"><i class="fa-brands fa-shopify"></i></div>
           <h3>Shopify Store Management</h3>
           <p>Store setup, upkeep and support so your online shop keeps running smoothly.</p>
-          <ul><li>Store setup &amp; theme customization</li><li>Product &amp; collection management</li><li>Ongoing updates &amp; support</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with Shopify Store Management">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Store setup and theme customization</li><li>Product and collection management</li><li>Ongoing updates and support</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Rs. 5,000 per month</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with Shopify Store Management">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="shopify-developer-karachi.html" aria-label="Shopify developer in Karachi">Shopify developer in Karachi <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
       </div>
     </div>
@@ -1705,23 +1903,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <article class="svc-card" id="video-editing" data-reveal="up">
           <div class="svc-ic"><i class="fa-solid fa-film"></i></div>
           <h3>Video Editing</h3>
-          <p>Clean, scroll-stopping edits for reels, <a class="in-link" href="#ads">ads</a> and brand videos.</p>
-          <ul><li>Reels, TikToks &amp; YouTube Shorts</li><li>Product &amp; ad videos</li><li>Captions, music &amp; motion graphics</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with Video Editing">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <p>Clean, scroll-stopping edits for reels, ads and brand videos.</p>
+          <ul><li>Reels, TikToks and YouTube Shorts</li><li>Product and ad videos</li><li>Captions, music and motion graphics</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Custom quote</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with Video Editing">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="graphic-design-video-editing-karachi.html" aria-label="Graphic design and video editing in Karachi">Design &amp; video in Karachi <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="social-media-management" data-reveal="up">
           <div class="svc-ic"><i class="fa-solid fa-photo-film"></i></div>
           <h3>Social Media Management</h3>
-          <p><a class="in-link" href="#video-editing">Content</a>, posting and captions, handled for you.</p>
-          <ul><li>Content planning</li><li>Posting &amp; captions</li><li>A consistent look for your brand</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with Social Media Management">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <p>Content, posting and captions, handled for you.</p>
+          <ul><li>Content planning</li><li>30 posts per month with daily posting</li><li>Professional captions and hashtags</li><li>A consistent look for your brand</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Rs. 12,000 per month</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with Social Media Management">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="social-media-marketing-karachi.html" aria-label="Social media marketing in Karachi">Social media marketing in Karachi <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="ai-ugc-ads" data-reveal="up">
           <div class="svc-ic"><i class="fa-solid fa-clapperboard"></i></div>
           <h3>AI UGC Ads</h3>
           <p>AI-generated, creator-style ad content for short-form platforms.</p>
-          <ul><li>Creator-style video ads</li><li>Made for <a class="in-link" href="#meta-ads">Meta</a> &amp; <a class="in-link" href="#tiktok-ads">TikTok</a></li><li>Hooks and scripts included</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with AI UGC Ads">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Creator-style video ads</li><li>Made for <a class="in-link" href="#meta-ads">Meta</a> and <a class="in-link" href="#tiktok-ads">TikTok</a></li><li>Hooks and scripts included</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Rs. 500 per ad, or 12 ads for Rs. 5,000</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with AI UGC Ads">Get started <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
       </div>
     </div>
@@ -1729,45 +1930,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="svc-block" id="ads">
       <div class="svc-block-head" data-reveal="up">
         <div class="svc-bi"><i class="fa-solid fa-bullhorn"></i></div>
-        <div><h2>Paid Advertising</h2><p>Campaigns that reach the right people and are tracked from click to sale.</p></div>
+        <div><h2>Paid Advertising</h2><p>Campaigns that reach the right people and are tracked from click to sale. See our full <a class="in-link" href="meta-ads-management-karachi.html">Meta and TikTok ads page</a>.</p></div>
       </div>
       <div class="svc-cards">
         <article class="svc-card" id="google-ads" data-reveal="up">
           <div class="svc-ic"><i class="fa-brands fa-google"></i></div>
           <h3>Google Ads</h3>
           <p>Search ads that put your business in front of people already looking for what you sell.</p>
-          <ul><li>Search campaign setup</li><li>Keyword research &amp; targeting</li><li>Conversion tracking &amp; optimization</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with Google Ads">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Search campaign setup</li><li>Keyword research and targeting</li><li>Conversion tracking and optimization</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Custom quote</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with Google Ads">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="google-ads-management-karachi.html" aria-label="Google Ads in Karachi">Google Ads in Karachi <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="meta-ads" data-reveal="up">
           <div class="svc-ic"><i class="fa-brands fa-facebook"></i></div>
           <h3>Meta Ads</h3>
           <p>Facebook and Instagram ad campaigns built around your goals.</p>
-          <ul><li>Campaign setup &amp; audience targeting</li><li>Ad creatives &amp; copy</li><li>Testing to find what works</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with Meta Ads">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Campaign setup and audience targeting</li><li>Ad creatives and copy</li><li>Testing to find what works</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Rs. 2,500 per campaign</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with Meta Ads">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="meta-ads-management-karachi.html" aria-label="Learn more">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="meta-ads-management" data-reveal="up">
           <div class="svc-ic"><i class="fa-solid fa-chart-line"></i></div>
           <h3>Meta Ads Management</h3>
           <p>Ongoing optimization and reporting for your <a class="in-link" href="#meta-ads">Meta campaigns</a>.</p>
-          <ul><li>Budget &amp; performance monitoring</li><li>Regular optimization</li><li>Clear, simple reporting</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with Meta Ads Management">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Budget and performance monitoring</li><li>Regular optimization</li><li>Clear, simple reporting</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Custom quote</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with Meta Ads Management">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="meta-ads-management-karachi.html" aria-label="Learn more">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="tiktok-ads" data-reveal="up">
           <div class="svc-ic"><i class="fa-brands fa-tiktok"></i></div>
           <h3>TikTok Ads</h3>
           <p>Short-form ad campaigns built to convert.</p>
-          <ul><li>Campaign setup &amp; targeting</li><li>Video-first ad creatives</li><li>Testing &amp; scaling</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with TikTok Ads">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Campaign setup and targeting</li><li>Video-first ad creatives</li><li>Testing and scaling</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Rs. 3,000 per campaign</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with TikTok Ads">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="meta-ads-management-karachi.html" aria-label="Learn more">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="tiktok-ads-management" data-reveal="up">
           <div class="svc-ic"><i class="fa-solid fa-chart-simple"></i></div>
           <h3>TikTok Ads Management</h3>
           <p>Ongoing monitoring and optimization of your <a class="in-link" href="#tiktok-ads">TikTok campaigns</a>.</p>
-          <ul><li>Daily performance checks</li><li>Optimization &amp; budget control</li><li>Clear, simple reporting</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with TikTok Ads Management">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Daily performance checks</li><li>Optimization and budget control</li><li>Clear, simple reporting</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Custom quote</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with TikTok Ads Management">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="meta-ads-management-karachi.html" aria-label="Learn more">Learn more <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
       </div>
+    <p class="svc-note" data-reveal="up">Ad spend is paid directly to the platform and is not included. Results are not guaranteed.</p>
     </div>
 
     <div class="svc-block" id="ai">
@@ -1781,42 +1988,96 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h3>AI Chatbot</h3>
           <p>24/7 support, FAQs and lead capture on your <a class="in-link" href="#website-development">website</a>.</p>
           <ul><li>Answers common questions instantly</li><li>Captures leads automatically</li><li>Trained on your business</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with AI Chatbot">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="svc-pricetag"><span>Price:</span> Rs. 6,000</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with AI Chatbot">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="ai-chatbot-whatsapp-chatbot-pakistan.html" aria-label="AI chatbots and automation in Pakistan">AI chatbots in Pakistan <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="whatsapp-chatbot" data-reveal="up">
           <div class="svc-ic"><i class="fa-brands fa-whatsapp"></i></div>
           <h3>WhatsApp Chatbot</h3>
           <p>Automated replies right on WhatsApp, where your customers already are.</p>
-          <ul><li>Instant replies, any time of day</li><li>Order &amp; enquiry handling</li><li>Hand-off to your team when needed</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with WhatsApp Chatbot">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <ul><li>Instant replies, any time of day</li><li>Order and enquiry handling</li><li>Hand-off to your team when needed</li></ul>
+          <div class="svc-pricetag"><span>Price:</span> Rs. 6,000</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with WhatsApp Chatbot">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="ai-chatbot-whatsapp-chatbot-pakistan.html" aria-label="AI chatbots and automation in Pakistan">AI chatbots in Pakistan <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
         <article class="svc-card" id="ai-automation" data-reveal="up">
           <div class="svc-ic"><i class="fa-solid fa-gears"></i></div>
           <h3>AI Automation</h3>
           <p>Workflows that run quietly in the background so your team saves time.</p>
           <ul><li>Automate repeat tasks</li><li>Connect your tools together</li><li>Built around how you work</li></ul>
-          <a class="svc-link" href="contact.html" aria-label="Get started with AI Automation">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="svc-pricetag"><span>Price:</span> Custom quote, scoped after a short discovery call</div>
+          <div class="svc-links"><a class="svc-link" href="contact.html" aria-label="Get started with AI Automation">Get started <i class="fa-solid fa-arrow-right"></i></a><a class="svc-link svc-alt" href="ai-chatbot-whatsapp-chatbot-pakistan.html" aria-label="AI chatbots and automation in Pakistan">AI chatbots in Pakistan <i class="fa-solid fa-arrow-right"></i></a></div>
         </article>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<section class="ab-sec ab-alt" id="how-we-work">
+  <div class="container">
+    <div class="ab-head" data-reveal="up"><h2>How We Work</h2></div>
+    <div class="ab-steps">
+        <div class="ab-step" data-reveal="up"><div class="ab-num">1</div><h3>Discover</h3><p>We learn about your business, audience and goals.</p></div>
+        <div class="ab-step" data-reveal="up"><div class="ab-num">2</div><h3>Strategize</h3><p>We plan the right solution and budget.</p></div>
+        <div class="ab-step" data-reveal="up"><div class="ab-num">3</div><h3>Build</h3><p>We design, develop and create your project.</p></div>
+        <div class="ab-step" data-reveal="up"><div class="ab-num">4</div><h3>Launch</h3><p>We test, refine and go live.</p></div>
+        <div class="ab-step" data-reveal="up"><div class="ab-num">5</div><h3>Grow</h3><p>We track results and keep improving.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ab-sec" id="why-mbs">
+  <div class="container">
+    <div class="ab-head" data-reveal="up"><h2>Why Choose MBS Agency</h2></div>
+    <div class="svc-cards four">
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>One team for everything</h3>
+          <p>Design, development, ads and AI under one roof.</p>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-tags"></i></div>
+          <h3>Clear pricing</h3>
+          <p>Starting prices are listed openly, with no surprise charges.</p>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-comments"></i></div>
+          <h3>Direct communication</h3>
+          <p>You talk to the people doing the work, and we <a class="in-link" href="contact.html">reply within one business day</a>.</p>
+        </article>
+        <article class="svc-card" data-reveal="up">
+          <div class="svc-ic"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Honest approach</h3>
+          <p>We do not promise guaranteed sales. We plan, test and improve step by step.</p>
+        </article>
+    </div>
+  </div>
+</section>
+
+<section class="ab-sec ab-alt" id="faq">
+  <div class="container">
+    <div class="ab-head" data-reveal="up"><h2>Frequently Asked Questions</h2></div>
+    <div class="ct-faq">
+      <details><summary>How much does a website cost?</summary><p>Our business website package starts from Rs. 9,999. Domain and hosting are billed separately, and larger projects are quoted after a short discussion. See our <a class="in-link" href="website-developer-karachi.html">website developer service in Karachi</a>.</p></details>
+      <details><summary>Is the ad budget included in your price?</summary><p>No. Our fee covers campaign setup and management. Your ad spend is paid directly to Meta, TikTok or Google. See our <a class="in-link" href="meta-ads-management-karachi.html">Meta and TikTok ads service</a>.</p></details>
+      <details><summary>What is included in social media management?</summary><p>Content planning, 30 posts per month, daily posting, professional captions and hashtags, for Rs. 12,000 per month. See our <a class="in-link" href="social-media-marketing-karachi.html">social media marketing service</a>.</p></details>
+      <details><summary>Can I combine services?</summary><p>Yes. Many clients combine a website with social media and ads. Tell us what you need and we will suggest a package.</p></details>
+      <details><summary>How long does a website take?</summary><p>Most websites launch in 2 to 4 weeks, depending on scope and revisions.</p></details>
+      <details><summary>Do you work with businesses outside Karachi?</summary><p>Yes. We work remotely with clients across Pakistan and internationally.</p></details>
+      <details><summary>How do I get started?</summary><p><a class="in-link" href="contact.html">Book a call</a> or message us on WhatsApp.</p></details>
+    </div>
+  </div>
+</section>
+
 <section style="padding:20px 0 120px;">
   <div class="cta-band" data-reveal="scale">
     <h2>Ready to Grow Your Business?</h2>
-    <p>Let's build a stronger digital presence for your business.</p>
+    <p>Tell us about your business and goals. We will reply within one business day with clear next steps.</p>
     <div class="cta-btns">
       <a href="contact.html" class="btn btn-white">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
       <a href="https://wa.me/923361205498" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(255,255,255,.5); color:#fff;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
-
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
 </main>
 <footer>
   <div class="container footer-top">
@@ -1831,6 +2092,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <div class="footer-services"><div class="footer-find-us">Services</div><nav aria-label="Services"><a href="website-developer-karachi.html">Website Development</a><a href="shopify-developer-karachi.html">Shopify Store Management</a><a href="social-media-marketing-karachi.html">Social Media Marketing</a><a href="meta-ads-management-karachi.html">Meta &amp; TikTok Ads</a><a href="google-ads-management-karachi.html">Google Ads</a><a href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Chatbots &amp; Automation</a><a href="graphic-design-video-editing-karachi.html">Graphic Design &amp; Video Editing</a><a href="services.html">All Services</a></nav></div>
     </div>
     <div class="footer-right">
       <div class="footer-find-us">Find Us Here</div>
@@ -1993,6 +2255,17 @@ document.getElementById('backToTop').addEventListener('click', () => {
    FOOTER YEAR
    ============================================================ */
 document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+/* Mobile menu: the arrow next to "Services" opens the service links */
+document.querySelectorAll('.mm-arrow').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var g = btn.closest('.mm-group'), open = g.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
 </script>
 </body>
 </html>

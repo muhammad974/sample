@@ -11,8 +11,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MBS Agency | Web Development, Video Editing, Google Ads &amp; AI</title>
-<meta name="description" content="MBS Agency is a digital agency offering web development, graphic design, video editing, Google Ads, Meta &amp; TikTok ads, Shopify management and AI automation.">
+<title>Digital Marketing Agency in Karachi | MBS Agency</title>
+<meta name="description" content="MBS Agency is a digital marketing agency in Karachi. Websites from Rs. 9,999, Shopify management, social media marketing, Meta &amp; TikTok ads and AI chatbots. Book a call.">
 
 <style>
 /* ============================================================
@@ -1183,13 +1183,78 @@ footer::before{
 .in-link{ color:#1D4ED8; font-weight:600; text-decoration:underline; text-decoration-color:rgba(37,99,235,.35); text-decoration-thickness:1.5px; text-underline-offset:3px; transition:color .25s, text-decoration-color .25s; }
 .in-link:hover{ color:#1E3A8A; text-decoration-color:currentColor; }
 [data-theme="dark"] .in-link{ color:#93C5FD; } [data-theme="dark"] .in-link:hover{ color:#DBEAFE; }
+
+/* ===== SERVICES DROPDOWN ===== */
+.nav-item{ position:relative; display:flex; align-items:center; }
+.nav-item > a .chev{ font-size:.6rem; margin-left:6px; transition:transform .3s var(--ease); }
+.nav-item:hover > a .chev, .nav-item:focus-within > a .chev{ transform:rotate(180deg); }
+.dropdown{ position:absolute; top:100%; left:0; min-width:280px; padding-top:14px; opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .25s var(--ease), transform .25s var(--ease), visibility .25s; z-index:1100; }
+.dropdown-inner{ background:var(--surface); border:1px solid var(--border); border-radius:16px; box-shadow:0 26px 54px -20px rgba(15,23,42,.28); padding:8px; }
+.nav-item:hover .dropdown, .nav-item:focus-within .dropdown{ opacity:1; visibility:visible; transform:none; }
+.nav-links .dropdown a{ display:block; padding:11px 14px; border-radius:10px; font-size:.9rem; font-weight:500; color:var(--text); }
+.nav-links .dropdown a::after{ display:none; }
+.nav-links .dropdown a:hover{ background:rgba(37,99,235,.08); color:var(--primary); }
+.nav-links .dropdown a.dd-all{ margin-top:6px; border-top:1px solid var(--border); border-radius:0 0 10px 10px; font-weight:700; color:var(--primary); }
+.mm-group{ display:flex; flex-direction:column; }
+.mm-row{ display:flex; align-items:center; justify-content:space-between; }
+.mm-arrow{ width:44px; height:44px; display:grid; place-items:center; color:var(--text-soft); }
+.mm-arrow i{ transition:transform .3s var(--ease); }
+.mm-group.open .mm-arrow i{ transform:rotate(180deg); }
+.mm-sub{ display:none; flex-direction:column; padding:2px 0 8px 16px; border-left:2px solid var(--border); margin-left:4px; }
+.mm-group.open .mm-sub{ display:flex; }
+.mobile-menu .mm-sub a{ font-size:.95rem; padding:9px 0; }
+.footer-services{ margin-top:18px; }
+.footer-services nav{ display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:10px; max-width:560px; }
+.footer-services a{ font-size:.82rem; color:rgba(255,255,255,.65); }
+.footer-services a:hover{ color:#fff; }
+/* ===== SERVICES PAGE ===== */
+.svc-chips{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:76px; }
+.svc-chips a{ padding:10px 22px; border-radius:var(--radius-full); border:1.5px solid var(--border); font-weight:600; font-size:.88rem; transition:all .3s var(--ease); }
+.svc-chips a:hover{ border-color:var(--primary); color:var(--primary); transform:translateY(-3px); }
+.svc-block{ margin-bottom:96px; scroll-margin-top:110px; }
+.svc-block:last-child{ margin-bottom:0; }
+.svc-block-head{ display:flex; align-items:center; gap:18px; margin-bottom:34px; }
+.svc-block-head h2{ font-size:clamp(1.6rem,3vw,2.2rem); }
+.svc-block-head p{ color:var(--text-soft); margin-top:4px; max-width:56ch; }
+.svc-bi{ width:60px; height:60px; flex:none; border-radius:18px; background:var(--gradient-primary); color:#fff; display:grid; place-items:center; font-size:1.5rem; box-shadow:0 10px 26px -8px var(--primary-glow); }
+.svc-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+.svc-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:32px 28px; display:flex; flex-direction:column; transition:transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s; }
+.svc-card:hover{ transform:translateY(-8px); border-color:var(--primary); box-shadow:0 28px 56px -22px var(--primary-glow); }
+.svc-ic{ width:52px; height:52px; border-radius:15px; background:rgba(37,99,235,.1); color:var(--primary); display:grid; place-items:center; font-size:1.25rem; margin-bottom:20px; transition:all .4s var(--ease); }
+.svc-card:hover .svc-ic{ background:var(--gradient-primary); color:#fff; transform:rotate(-6deg) scale(1.08); }
+.svc-card h3{ font-size:1.2rem; margin-bottom:10px; }
+.svc-card > p{ color:var(--text-soft); font-size:.92rem; margin-bottom:18px; }
+.svc-card ul{ list-style:none; display:grid; gap:9px; margin-bottom:26px; }
+.svc-card li{ position:relative; padding-left:24px; font-size:.88rem; color:var(--text-soft); }
+.svc-card li::before{ content:"\f00c"; font-family:"Font Awesome 6 Free"; font-weight:900; position:absolute; left:0; top:2px; color:var(--primary); font-size:.72rem; }
+.svc-links{ margin-top:auto; display:flex; gap:20px; flex-wrap:wrap; }
+.svc-links .svc-link{ margin-top:0; }
+.svc-links .svc-alt{ color:var(--text-soft); }
+.svc-links .svc-alt:hover{ color:var(--primary); }
+.svc-link{ margin-top:auto; display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:.9rem; color:var(--primary); }
+.svc-link i{ transition:transform .3s var(--ease); }
+.svc-card:hover .svc-link i{ transform:translateX(5px); }
+@media(max-width:1000px){ .svc-cards{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:640px){ .svc-cards{ grid-template-columns:1fr; } .svc-block-head{ align-items:flex-start; } }
+
+/* links inside the dark "Why" band */
+.why .in-link{ color:#93C5FD; text-decoration-color:rgba(147,197,253,.45); }
+.why .in-link:hover{ color:#DBEAFE; }
+/* ===== HOME PAGE ADDITIONS ===== */
+.why-grid.why-grid-5{ grid-template-columns:repeat(3,1fr); }
+@media(max-width:1000px){ .why-grid.why-grid-5{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:640px){ .why-grid.why-grid-5{ grid-template-columns:1fr; } }
+.wd-list{ list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:14px 24px; max-width:920px; margin:0 auto; }
+.wd-list li{ position:relative; padding:18px 20px 18px 56px; background:var(--surface); border:1px solid var(--border); border-radius:16px; color:var(--text-soft); font-size:.97rem; }
+.wd-list li::before{ content:"\f00c"; font-family:"Font Awesome 6 Free"; font-weight:900; position:absolute; left:18px; top:50%; transform:translateY(-50%); width:26px; height:26px; border-radius:50%; background:var(--gradient-primary); color:#fff; display:grid; place-items:center; font-size:.7rem; }
+@media(max-width:700px){ .wd-list{ grid-template-columns:1fr; } }
+.ab-text{ max-width:820px; margin:0 auto; text-align:center; font-size:1.12rem; color:var(--text-soft); }
 </style>
 
 <!-- ============================================================
      SEO META TAGS
      ============================================================ -->
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="keywords" content="web design agency, website development, graphic design, AI chatbot, business automation, brand identity, MBS Agency">
 <meta name="author" content="MBS Agency">
 <link rel="canonical" href="https://www.mbsagency.online/">
 <meta name="theme-color" content="#2563EB">
@@ -1201,20 +1266,20 @@ footer::before{
 <!-- Open Graph / Facebook / LinkedIn preview -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.mbsagency.online/">
-<meta property="og:title" content="MBS Agency | Web Development, Video Editing, Google Ads &amp; AI">
-<meta property="og:description" content="MBS Agency is a digital agency offering web development, graphic design, video editing, Google Ads, Meta &amp; TikTok ads, Shopify management and AI automation.">
+<meta property="og:title" content="Digital Marketing Agency in Karachi | MBS Agency">
+<meta property="og:description" content="MBS Agency is a digital marketing agency in Karachi. Websites from Rs. 9,999, Shopify management, social media marketing, Meta &amp; TikTok ads and AI chatbots. Book a call.">
 <meta property="og:image" content="https://www.mbsagency.online/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="MBS Agency: web development, video editing, Google Ads and AI automation">
+<meta property="og:image:alt" content="MBS Agency, a digital marketing agency in Karachi">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="MBS Agency">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://www.mbsagency.online/">
-<meta name="twitter:title" content="MBS Agency | Web Development, Video Editing, Google Ads &amp; AI">
-<meta name="twitter:description" content="MBS Agency is a digital agency offering web development, graphic design, video editing, Google Ads, Meta &amp; TikTok ads, Shopify management and AI automation.">
+<meta name="twitter:title" content="Digital Marketing Agency in Karachi | MBS Agency">
+<meta name="twitter:description" content="MBS Agency is a digital marketing agency in Karachi. Websites from Rs. 9,999, Shopify management, social media marketing, Meta &amp; TikTok ads and AI chatbots. Book a call.">
 <meta name="twitter:image" content="https://www.mbsagency.online/og-image.jpg">
 
 <!-- Structured data (JSON-LD) for rich search results -->
@@ -1242,7 +1307,7 @@ footer::before{
       "url": "https://www.mbsagency.online/",
       "logo": "https://www.mbsagency.online/favicon.png",
       "image": "https://www.mbsagency.online/og-image.jpg",
-      "description": "MBS Agency is a digital agency offering web development, graphic design, video editing, Google Ads, Meta and TikTok ads, Shopify management and AI automation.",
+      "description": "Digital marketing agency in Karachi offering website development, Shopify management, social media marketing, Meta and TikTok ads, and AI automation.",
       "email": "mbswebagency@gmail.com",
       "telephone": "+92-336-1205498",
       "sameAs": [
@@ -1431,8 +1496,8 @@ footer::before{
         "addressCountry": "PK"
       },
       "areaServed": [
-        "Pakistan",
-        "Worldwide"
+        "Karachi",
+        "Pakistan"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -1456,10 +1521,18 @@ footer::before{
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How long does website development take?",
+          "name": "Which digital marketing services do you offer in Karachi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most websites launch in 2–4 weeks depending on scope and revisions. See examples in our portfolio."
+            "text": "We offer website development, Shopify store management, social media marketing, Meta and TikTok ads, Google Ads, graphic design, video editing and AI chatbots."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a business website cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our business website package starts from Rs. 9,999. Domain and hosting are billed separately. Custom projects are quoted after a short discussion. See our website developer service in Karachi."
           }
         },
         {
@@ -1472,18 +1545,26 @@ footer::before{
         },
         {
           "@type": "Question",
-          "name": "Is advertising budget included?",
+          "name": "How much does social media management cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No — our fee covers campaign setup and management. Your ad spend on Meta or TikTok is paid directly to the platform and is separate."
+            "text": "Our social media management package is Rs. 12,000 per month and includes 30 posts, daily posting, professional captions and hashtags."
           }
         },
         {
           "@type": "Question",
-          "name": "Do you provide social media content?",
+          "name": "Is the advertising budget included in your price?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — our Social Media Management service includes content creation, professional captions, hashtags and daily posting, handled by our team."
+            "text": "No. Our fee covers campaign setup and management. Your ad spend on Meta or TikTok is paid directly to the platform."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does website development take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most websites launch in 2 to 4 weeks depending on scope and revisions. See examples in our portfolio."
           }
         },
         {
@@ -1504,10 +1585,18 @@ footer::before{
         },
         {
           "@type": "Question",
+          "name": "Do you work with businesses outside Karachi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We work remotely with clients across Pakistan and internationally."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "How do I start a project?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Book a call or message us on WhatsApp — we'll discuss your goals and recommend the right services to get started."
+            "text": "Book a call or message us on WhatsApp and we will recommend the right services for your goals."
           }
         }
       ]
@@ -1535,7 +1624,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
+      <div class="nav-item has-dropdown"><a href="services.html" aria-haspopup="true">Services <i class="fa-solid fa-chevron-down chev"></i></a><div class="dropdown"><div class="dropdown-inner"><a href="website-developer-karachi.html">Website Development</a><a href="shopify-developer-karachi.html">Shopify Store Management</a><a href="social-media-marketing-karachi.html">Social Media Marketing</a><a href="meta-ads-management-karachi.html">Meta &amp; TikTok Ads</a><a href="google-ads-management-karachi.html">Google Ads</a><a href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Chatbots &amp; Automation</a><a href="graphic-design-video-editing-karachi.html">Graphic Design &amp; Video Editing</a><a href="services.html" class="dd-all">All Services</a></div></div></div>
       <a href="portfolio.html">Portfolio</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -1559,7 +1648,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="mobile-menu-links">
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
+    <div class="mm-group"><div class="mm-row"><a href="services.html">Services</a><button class="mm-arrow" type="button" aria-label="Show service pages" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button></div><div class="mm-sub"><a href="website-developer-karachi.html">Website Development</a><a href="shopify-developer-karachi.html">Shopify Store Management</a><a href="social-media-marketing-karachi.html">Social Media Marketing</a><a href="meta-ads-management-karachi.html">Meta &amp; TikTok Ads</a><a href="google-ads-management-karachi.html">Google Ads</a><a href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Chatbots &amp; Automation</a><a href="graphic-design-video-editing-karachi.html">Graphic Design &amp; Video Editing</a><a href="services.html" class="dd-all">All Services</a></div></div>
     <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -1581,22 +1670,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="container hero-grid">
     <div data-reveal="up">
-      <div class="eyebrow"><span class="dot"></span> Design · Develop · Automate</div>
-      <h1>We <span class="grad-text">Design</span>, <span class="grad-text">Develop</span> &amp; <span class="grad-text">Automate</span> Businesses for <span class="grad-text">Growth.</span></h1>
-      <p class="lead">From high-converting <a class="in-link" href="services.html#website-development">websites</a> and <a class="in-link" href="services.html#graphic-design">creative design</a> to <a class="in-link" href="services.html#ai-automation">AI automation</a>, <a class="in-link" href="services.html#ai-chatbot">chatbots</a> and <a class="in-link" href="services.html#ads">paid advertising</a> — we build digital solutions that help businesses grow.</p>
+      <div class="eyebrow"><span class="dot"></span> Digital Marketing Agency in Karachi</div>
+      <h1>We Help <span class="grad-text">Karachi</span> Businesses <span class="grad-text">Grow Online</span></h1>
+      <p class="lead">MBS Agency is a <a class="in-link" href="about.html">digital marketing agency in Karachi</a>. We build <a class="in-link" href="website-developer-karachi.html">websites</a>, manage <a class="in-link" href="shopify-developer-karachi.html">Shopify stores</a>, run <a class="in-link" href="social-media-marketing-karachi.html">social media</a> and <a class="in-link" href="meta-ads-management-karachi.html">Meta and TikTok ads</a>, and set up <a class="in-link" href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI chatbots</a>, so you get one reliable team for your whole online presence.</p>
       <div class="hero-btns">
         <a href="contact.html" class="btn btn-primary magnetic">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#portfolio" class="btn btn-outline magnetic">View Our Work</a>
+        <a href="portfolio.html" class="btn btn-outline magnetic">View Our Work</a>
       </div>
-      <div class="hero-service-line">Websites &nbsp;•&nbsp; Design &nbsp;•&nbsp; AI &nbsp;•&nbsp; Automation &nbsp;•&nbsp; Ads &nbsp;•&nbsp; Social Media</div>
+      <div class="hero-service-line">Websites from Rs. 9,999 &nbsp;·&nbsp; Reply within one business day &nbsp;·&nbsp; Clear pricing, no hidden costs</div>
       <div class="hero-trust">
         <div class="trust-text" style="margin-bottom:12px; font-weight:600;">Trusted by growing businesses</div>
       </div>
       <div class="hero-client-strip">
-        <img src="assets/images/clients/burger-star.png" alt="Burger Star" loading="lazy">
-        <img src="assets/images/clients/dry-delights.png" alt="Dry Delights" loading="lazy">
-        <img src="assets/images/clients/zamana.png" alt="Zamana" loading="lazy">
-        <img src="assets/images/clients/scenturies.png" alt="Scenturies" loading="lazy">
+        <img src="assets/images/clients/burger-star.png" alt="Burger Star, client of MBS Agency" loading="lazy">
+        <img src="assets/images/clients/dry-delights.png" alt="Dry Delights, client of MBS Agency" loading="lazy">
+        <img src="assets/images/clients/zamana.png" alt="Zamana, client of MBS Agency" loading="lazy">
+        <img src="assets/images/clients/scenturies.png" alt="Scenturies, client of MBS Agency" loading="lazy">
       </div>
     </div>
 
@@ -1646,69 +1735,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ============================================================
      SERVICES
      ============================================================ -->
-<section class="services section-pad" id="services">
+<section class="section-pad" id="services">
   <div class="container">
     <div class="sec-head" data-reveal="up">
-      <div class="eyebrow"><span class="dot"></span> What We Do</div>
-      <h2>Full-Stack Growth, <span class="grad-text">Under One Roof</span></h2>
-      <p>From your first sketch to your smartest <a class="in-link" href="services.html#ai-automation">automation</a> — <a class="in-link" href="services.html">every service</a> is built to compound your growth.</p>
+      <div class="eyebrow"><span class="dot"></span> Our Services</div>
+      <h2>Digital Marketing <span class="grad-text">Services in Karachi</span></h2>
+      <p>Everything your business needs to get found online and get customers, handled by one team.</p>
     </div>
-
-    <div class="svc-categories stagger">
-
-      <div class="svc-category" data-reveal="up" style="--i:0">
-        <div class="svc-cat-head">
-          <div class="svc-cat-icon"><i class="fa-solid fa-pen-ruler"></i></div>
-          <h3>Design &amp; Development</h3>
-        </div>
-        <ul class="svc-mini-list">
-          <li><i class="fa-solid fa-palette"></i><div><strong><a class="in-link" href="services.html#graphic-design">Graphic Design</a></strong><span>Logos, branding &amp; marketing visuals.</span></div></li>
-          <li><i class="fa-solid fa-code"></i><div><strong><a class="in-link" href="services.html#website-development">Website Development</a></strong><span>Fast, responsive sites built to convert.</span></div></li>
-          <li><i class="fa-brands fa-shopify"></i><div><strong><a class="in-link" href="services.html#shopify-store-management">Shopify Store Management</a></strong><span>Ongoing setup, upkeep &amp; store support.</span></div></li>
-        </ul>
-      </div>
-
-      <div class="svc-category" data-reveal="up" style="--i:1">
-        <div class="svc-cat-head">
-          <div class="svc-cat-icon"><i class="fa-solid fa-robot"></i></div>
-          <h3>AI &amp; Automation</h3>
-        </div>
-        <ul class="svc-mini-list">
-          <li><i class="fa-solid fa-comments"></i><div><strong><a class="in-link" href="services.html#ai-chatbot">AI Chatbot</a></strong><span>24/7 support, FAQs &amp; lead capture.</span></div></li>
-          <li><i class="fa-brands fa-whatsapp"></i><div><strong><a class="in-link" href="services.html#whatsapp-chatbot">WhatsApp Chatbot</a></strong><span>Automated replies right on WhatsApp.</span></div></li>
-          <li><i class="fa-solid fa-gears"></i><div><strong><a class="in-link" href="services.html#ai-automation">AI Automation</a></strong><span>Workflows that run quietly in the background.</span></div></li>
-          <li><i class="fa-solid fa-clapperboard"></i><div><strong><a class="in-link" href="services.html#ai-ugc-ads">AI UGC Ads</a></strong><span>AI-generated creator-style ad content.</span></div></li>
-        </ul>
-      </div>
-
-      <div class="svc-category" data-reveal="up" style="--i:2">
-        <div class="svc-cat-head">
-          <div class="svc-cat-icon"><i class="fa-solid fa-bullhorn"></i></div>
-          <h3>Paid Advertising</h3>
-        </div>
-        <ul class="svc-mini-list">
-          <li><i class="fa-brands fa-google"></i><div><strong><a class="in-link" href="services.html#google-ads">Google Ads</a></strong><span>Search ads that reach customers already looking for you.</span></div></li>
-          <li><i class="fa-brands fa-facebook"></i><div><strong><a class="in-link" href="services.html#meta-ads">Meta Ads</a></strong><span>Facebook &amp; Instagram ad campaigns.</span></div></li>
-          <li><i class="fa-solid fa-chart-line"></i><div><strong><a class="in-link" href="services.html#meta-ads-management">Meta Ads Management</a></strong><span>Ongoing optimization &amp; reporting.</span></div></li>
-          <li><i class="fa-brands fa-tiktok"></i><div><strong><a class="in-link" href="services.html#tiktok-ads">TikTok Ads</a></strong><span>Short-form ad campaigns built to convert.</span></div></li>
-          <li><i class="fa-solid fa-chart-simple"></i><div><strong><a class="in-link" href="services.html#tiktok-ads-management">TikTok Ads Management</a></strong><span>Ongoing monitoring &amp; optimization.</span></div></li>
-        </ul>
-      </div>
-
-      <div class="svc-category" data-reveal="up" style="--i:3">
-        <div class="svc-cat-head">
-          <div class="svc-cat-icon"><i class="fa-solid fa-hashtag"></i></div>
-          <h3>Social Media &amp; Video</h3>
-        </div>
-        <ul class="svc-mini-list">
-          <li><i class="fa-solid fa-photo-film"></i><div><strong><a class="in-link" href="services.html#social-media-management">Social Media Management</a></strong><span>Content, posting &amp; captions, handled for you.</span></div></li>
-          <li><i class="fa-solid fa-film"></i><div><strong><a class="in-link" href="services.html#video-editing">Video Editing</a></strong><span>Reels, ads &amp; brand videos, edited to engage.</span></div></li>
-        </ul>
-      </div>
-
+    <div class="svc-cards">
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-ic"><i class="fa-solid fa-code"></i></div>
+        <h3>Website Development</h3>
+        <p>Fast, mobile-friendly business websites built to turn visitors into customers. From Rs. 9,999.</p>
+        <a class="svc-link" href="website-developer-karachi.html" aria-label="Website developer in Karachi: Website Development">Website developer in Karachi <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-ic"><i class="fa-solid fa-bullhorn"></i></div>
+        <h3>Meta and TikTok Ads</h3>
+        <p>Facebook, Instagram and TikTok campaigns that are set up, tracked and optimized.</p>
+        <a class="svc-link" href="meta-ads-management-karachi.html" aria-label="Ads management in Karachi: Meta and TikTok Ads">Ads management in Karachi <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-ic"><i class="fa-solid fa-photo-film"></i></div>
+        <h3>Social Media Marketing</h3>
+        <p>Content planning, designs, captions and daily posting for Instagram, Facebook and TikTok.</p>
+        <a class="svc-link" href="social-media-marketing-karachi.html" aria-label="Learn more: Social Media Marketing">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-ic"><i class="fa-brands fa-shopify"></i></div>
+        <h3>Shopify Store Management</h3>
+        <p>Store setup, product management, theme customization and ongoing support.</p>
+        <a class="svc-link" href="shopify-developer-karachi.html" aria-label="Learn more: Shopify Store Management">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-ic"><i class="fa-solid fa-palette"></i></div>
+        <h3>Graphic Design and Video Editing</h3>
+        <p>Logos, branding, reels and ad creatives that make your brand look professional.</p>
+        <a class="svc-link" href="graphic-design-video-editing-karachi.html" aria-label="Learn more: Graphic Design and Video Editing">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-ic"><i class="fa-solid fa-robot"></i></div>
+        <h3>AI Chatbots and Automation</h3>
+        <p>Website and WhatsApp chatbots that answer customers and capture leads 24/7.</p>
+        <a class="svc-link" href="ai-chatbot-whatsapp-chatbot-pakistan.html" aria-label="Learn more: AI Chatbots and Automation">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
     </div>
     <div data-reveal="up" style="text-align:center; margin-top:56px;">
-      <a href="services.html" class="btn btn-primary">Explore All Services <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="services.html" class="btn btn-primary">See All Services and Pricing <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -1720,38 +1793,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="sec-head" data-reveal="up" style="margin-bottom:28px;">
       <div class="eyebrow"><span class="dot"></span> Our Clients</div>
-      <h2>Clients We've <span class="grad-text">Worked With</span></h2>
-      <p>Trusted by growing businesses across different industries.</p>
+      <h2>Brands We Have <span class="grad-text">Worked With</span></h2>
+      <p>We have helped businesses across food, fashion, fragrances, kids’ products, events and retail, including Burger Star, Dry Delights, Scenturies, Zamana, Waseem Women’s Boutique and The Her Gallery.</p>
     </div>
   </div>
     <div class="clients-marquee">
       <div class="clients-track">
-        <div class="marquee-logo"><img src="assets/images/clients/burger-star.png" alt="Burger Star logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/dry-delights.png" alt="Dry Delights logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/zamana.png" alt="Zamana logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/novatools.png" alt="Nova Tools logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/design-creators.png" alt="Design Creators Event Planner logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/scenturies.png" alt="Scenturies logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/waseem-boutique.png" alt="Waseem Women's Boutique logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/her-gallery.png" alt="The Her Gallery logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/kidsnchoice.png" alt="Kidsnchoice logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/burger-star.png" alt="Burger Star logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/dry-delights.png" alt="Dry Delights logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/zamana.png" alt="Zamana logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/novatools.png" alt="Nova Tools logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/design-creators.png" alt="Design Creators Event Planner logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/scenturies.png" alt="Scenturies logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/waseem-boutique.png" alt="Waseem Women's Boutique logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/her-gallery.png" alt="The Her Gallery logo" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/kidsnchoice.png" alt="Kidsnchoice logo" loading="lazy"></div>
+        <div class="marquee-logo"><img src="assets/images/clients/burger-star.png" alt="Burger Star, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/dry-delights.png" alt="Dry Delights, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/zamana.png" alt="Zamana, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/novatools.png" alt="Nova Tools, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/design-creators.png" alt="Design Creators Event Planner, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/scenturies.png" alt="Scenturies, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/waseem-boutique.png" alt="Waseem Women's Boutique, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/her-gallery.png" alt="The Her Gallery, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/kidsnchoice.png" alt="Kidsnchoice, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/burger-star.png" alt="Burger Star, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/dry-delights.png" alt="Dry Delights, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/zamana.png" alt="Zamana, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/novatools.png" alt="Nova Tools, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/design-creators.png" alt="Design Creators Event Planner, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/scenturies.png" alt="Scenturies, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/waseem-boutique.png" alt="Waseem Women's Boutique, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/her-gallery.png" alt="The Her Gallery, client of MBS Agency" loading="lazy"></div><div class="marquee-logo"><img src="assets/images/clients/kidsnchoice.png" alt="Kidsnchoice, client of MBS Agency" loading="lazy"></div>
       </div>
     </div>
-</section>
-
-<!-- ============================================================
-     PORTFOLIO
-     ============================================================ -->
-<section class="section-pad" id="portfolio">
-  <div class="container">
-    <div class="sec-head" data-reveal="up">
-      <div class="eyebrow"><span class="dot"></span> Our Work</div>
-      <h2>Real Projects. <span class="grad-text">Real Businesses.</span></h2>
-      <p>A look at the <a class="in-link" href="portfolio.html">work we have created</a> for growing brands.</p>
-    </div>
-
-    <!-- DEV NOTE: portfolio content now lives in the `portfolioProjects` data array inside the
-         inline script block near the end of this file (search for "PORTFOLIO DATA"). To replace the
-         Unsplash placeholders with real project photos, just edit the `images` arrays there —
-         add, remove or swap URLs. Nothing else in this file needs to change; the cards, carousels
-         and layout are all generated automatically from that data. -->
-    <div class="portfolio-slider-grid stagger" id="portfolioGrid"></div>
-
-    <div data-reveal="up" style="text-align:center; margin-top:56px;">
-      <a href="portfolio.html" class="btn btn-primary">View Our Website Projects <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
+  <div class="container" data-reveal="up" style="text-align:center; margin-top:40px;">
+    <a href="portfolio.html" class="btn btn-outline">See Our Portfolio <i class="fa-solid fa-arrow-right"></i></a>
   </div>
 </section>
 
@@ -1761,21 +1813,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="why section-pad" id="about">
   <div class="blob blob-anim" style="width:400px;height:400px;background:var(--primary);top:-100px;right:-80px;"></div>
   <div class="container">
+  <div class="sec-head" data-reveal="up">
+  <div class="eyebrow" style="background:rgba(59,130,246,.12); border-color:rgba(59,130,246,.25);"><span class="dot"></span> Why MBS</div>
+  <h2>Why Businesses in Karachi <span class="grad-text">Choose MBS Agency</span></h2>
+  </div>
+  <div class="why-grid why-grid-5 stagger">
+  <div class="why-card" data-reveal="up" style="--i:0"><div class="why-icon"><i class="fa-solid fa-layer-group"></i></div><h3>One team for everything</h3><p>Design, development, ads and AI under one roof, so nothing falls between different vendors.</p></div>
+  <div class="why-card" data-reveal="up" style="--i:1"><div class="why-icon"><i class="fa-solid fa-tags"></i></div><h3>Clear pricing</h3><p>Our packages are listed openly on our <a class="in-link" href="services.html">services page</a>. No surprise charges.</p></div>
+  <div class="why-card" data-reveal="up" style="--i:2"><div class="why-icon"><i class="fa-solid fa-comments"></i></div><h3>Direct communication</h3><p>You talk to the people doing the work, and we <a class="in-link" href="contact.html">reply within one business day</a>.</p></div>
+  <div class="why-card" data-reveal="up" style="--i:3"><div class="why-icon"><i class="fa-solid fa-store"></i></div><h3>Built for small and growing businesses</h3><p>We understand tight budgets and focus on what actually helps you get customers.</p></div>
+  <div class="why-card" data-reveal="up" style="--i:4"><div class="why-icon"><i class="fa-solid fa-handshake"></i></div><h3>Practical, honest approach</h3><p>We do not promise guaranteed sales. We plan, test and improve step by step.</p></div>
+  </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHO WE HELP
+     ============================================================ -->
+<section class="section-pad" id="who-we-help" style="background:var(--surface-2);">
+  <div class="container">
     <div class="sec-head" data-reveal="up">
-      <div class="eyebrow" style="background:rgba(59,130,246,.12); border-color:rgba(59,130,246,.25);"><span class="dot"></span> Why MBS</div>
-      <h2>Why Businesses <span class="grad-text">Choose MBS</span></h2>
-      <p>One agency. Multiple digital solutions. Built around your business goals.</p>
+      <div class="eyebrow"><span class="dot"></span> Industries</div>
+      <h2>Who We <span class="grad-text">Help</span></h2>
     </div>
-    <p class="about-intro">MBS Agency is a <a class="in-link" href="about.html">digital agency</a> helping businesses with <a class="in-link" href="services.html#graphic-design">design</a>, <a class="in-link" href="services.html#website-development">websites</a>, AI, <a class="in-link" href="services.html#ai-automation">automation</a>, <a class="in-link" href="services.html#ads">advertising</a>, <a class="in-link" href="services.html#social-media-management">social media</a> and <a class="in-link" href="services.html#shopify-store-management">e-commerce</a> &mdash; all handled by one team, so nothing falls through the cracks between different vendors. We focus on practical, working solutions that move your business forward, not just a nice-looking deliverable.</p>
-    <div class="why-grid why-grid-4 stagger">
-      <div class="why-card" data-reveal="up" style="--i:0"><div class="why-icon"><i class="fa-solid fa-palette"></i></div><h3>Creative</h3><p><a class="in-link" href="services.html#graphic-design">Design</a> that makes your brand stand out.</p></div>
-      <div class="why-card" data-reveal="up" style="--i:1"><div class="why-icon"><i class="fa-solid fa-code"></i></div><h3>Digital</h3><p><a class="in-link" href="services.html#website-development">Websites</a> and <a class="in-link" href="services.html#shopify-store-management">e-commerce</a> solutions built for businesses.</p></div>
-      <div class="why-card" data-reveal="up" style="--i:2"><div class="why-icon"><i class="fa-solid fa-robot"></i></div><h3>AI-Powered</h3><p><a class="in-link" href="services.html#ai-chatbot">Chatbots</a> and <a class="in-link" href="services.html#ai-automation">automation</a> that streamline your business.</p></div>
-      <div class="why-card" data-reveal="up" style="--i:3"><div class="why-icon"><i class="fa-solid fa-chart-line"></i></div><h3>Growth-Focused</h3><p>Digital marketing built around your business goals.</p></div>
-    </div>
-    <div data-reveal="up" style="text-align:center; margin-top:48px;">
-      <a href="about.html" class="btn btn-outline">More About Us <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
+    <ul class="wd-list">
+      <li data-reveal="up">Online stores and <a class="in-link" href="shopify-developer-karachi.html">Shopify brands</a> that want more traffic and orders</li>
+      <li data-reveal="up">Clothing, fashion and fragrance brands that need strong <a class="in-link" href="social-media-marketing-karachi.html">social media</a> and <a class="in-link" href="meta-ads-management-karachi.html">ads</a></li>
+      <li data-reveal="up">Restaurants and food businesses that want more local customers</li>
+      <li data-reveal="up">Service businesses that need a professional <a class="in-link" href="website-developer-karachi.html">website</a> and more enquiries</li>
+      <li data-reveal="up">Creators and personal brands that need a media kit, content and growth</li>
+    </ul>
   </div>
 </section>
 
@@ -1788,7 +1855,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="sec-head" data-reveal="up">
       <div class="eyebrow"><span class="dot"></span> How We Work</div>
       <h2>How We <span class="grad-text">Work</span></h2>
-      <p>Five focused stages take your project from idea to a fully live, working system.</p>
+      <p>A simple process, from your first call to ongoing growth.</p>
     </div>
 
     <div class="process-track" id="processTrack">
@@ -1823,15 +1890,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ============================================================
-     STATISTICS
+     ABOUT (SHORT)
      ============================================================ -->
-<section class="stats section-pad">
+<section class="section-pad" id="about-us" style="background:var(--surface-2);">
   <div class="container">
-    <div class="stats-grid">
-      <div class="stat-box" data-reveal="up"><div class="stat-icon"><i class="fa-solid fa-diagram-project"></i></div><div class="stat-label" style="font-size:1rem; font-weight:700; margin-top:10px;">Real Client Projects</div></div>
-      <div class="stat-box" data-reveal="up"><div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div><div class="stat-label" style="font-size:1rem; font-weight:700; margin-top:10px;">Design, Dev &amp; AI Under One Roof</div></div>
-      <div class="stat-box" data-reveal="up"><div class="stat-icon"><i class="fa-solid fa-headset"></i></div><div class="stat-label" style="font-size:1rem; font-weight:700; margin-top:10px;">Direct, Responsive Support</div></div>
-      <div class="stat-box" data-reveal="up"><div class="stat-icon"><i class="fa-solid fa-handshake"></i></div><div class="stat-label" style="font-size:1rem; font-weight:700; margin-top:10px;">Transparent, No-Guesswork Pricing</div></div>
+    <div class="sec-head" data-reveal="up">
+      <div class="eyebrow"><span class="dot"></span> About Us</div>
+      <h2>A Karachi Agency That Works as <span class="grad-text">Your Digital Team</span></h2>
+    </div>
+    <p class="ab-text" data-reveal="up">We started MBS Agency because most small businesses do not need five different vendors, they need one reliable team that understands their goals. Today we work remotely with clients in Karachi, across Pakistan and worldwide.</p>
+    <div data-reveal="up" style="text-align:center; margin-top:36px;">
+      <a href="about.html" class="btn btn-outline">More About Us <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -1845,13 +1914,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container" style="position:relative; z-index:1;">
     <div class="sec-head" data-reveal="up">
       <div class="eyebrow"><span class="dot"></span> Client Love</div>
-      <h2>Don't Just Take <span class="grad-text">Our Word For It</span></h2>
-      <p>Real feedback from businesses we've worked with.</p>
+      <h2>What Our <span class="grad-text">Clients Say</span></h2>
+      <p>Real feedback from businesses we have worked with.</p>
     </div>
     <div class="testi-slider">
       <div class="testi-viewport" id="testiViewport">
         <div class="testi-track" id="testiTrack">
-          <div class="testi-card" data-reveal="up">
+          <div class="testi-card">
             <i class="fa-solid fa-quote-right quote"></i>
             <div class="testi-stars">★★★★★</div>
             <p class="testi-text">Great design, amazing creativity and exactly what we needed for our brand!</p>
@@ -1860,7 +1929,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div><div class="testi-name">Insha by Ahmad</div><div class="testi-role">Branding &amp; Social Media Design client</div></div>
             </div>
           </div>
-          <div class="testi-card" data-reveal="up">
+          <div class="testi-card">
             <i class="fa-solid fa-quote-right quote"></i>
             <div class="testi-stars">★★★★★</div>
             <p class="testi-text">Wao very nice, I really like your work &mdash; amazing work, keep it up. Client loved our social media post!</p>
@@ -1869,7 +1938,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div><div class="testi-name">ALIF Jewelry &amp; Clothing</div><div class="testi-role">Social Media Design client</div></div>
             </div>
           </div>
-          <div class="testi-card" data-reveal="up">
+          <div class="testi-card">
             <i class="fa-solid fa-quote-right quote"></i>
             <div class="testi-stars">★★★★★</div>
             <p class="testi-text">Absolutely loved working with MBS Agency Official! They designed my UGC media kit so beautifully and professionally. The design is elegant, creative, and perfectly matches my vision. Their communication, creativity, and attention to detail were amazing throughout the process. I'm genuinely happy with the final result and would definitely recommend MBS Agency Official to other creators and brands. Highly recommended!</p>
@@ -1878,7 +1947,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div><div class="testi-name">@lone_vibe4</div><div class="testi-role">UGC Media Kit client</div></div>
             </div>
           </div>
-          <div class="testi-card" data-reveal="up">
+          <div class="testi-card">
             <i class="fa-solid fa-quote-right quote"></i>
             <div class="testi-stars">★★★★★</div>
             <p class="testi-text">I had a great experience working with MBS Agency. They helped me create engaging social media posts and gave me useful suggestions to improve my content. After following their advice, I noticed better reach and more views on my posts. They are professional, supportive, and easy to work with. I highly recommend their services to anyone looking to grow on social media.</p>
@@ -1887,7 +1956,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div><div class="testi-name">Verified Client</div><div class="testi-role">Social Media Management client</div></div>
             </div>
           </div>
-          <div class="testi-card" data-reveal="up">
+          <div class="testi-card">
             <i class="fa-solid fa-quote-right quote"></i>
             <div class="testi-stars">★★★★★</div>
             <p class="testi-text">I recently took a service by MBS Agency &mdash; I really appreciate all the team because they deliver what they say. I think this is one of the best marketing agencies.</p>
@@ -1896,7 +1965,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div><div class="testi-name">Verified Client</div><div class="testi-role">Marketing Services client</div></div>
             </div>
           </div>
-          <div class="testi-card" data-reveal="up">
+          <div class="testi-card">
             <i class="fa-solid fa-quote-right quote"></i>
             <div class="testi-stars">★★★★★</div>
             <p class="testi-text">Big thanks to MBS Agency! The insights you shared for my AI beauty and fashion content were incredibly helpful and practical. Appreciate the support.</p>
@@ -1924,145 +1993,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ============================================================
-     PRICING
-     ============================================================ -->
-<section class="section-pad" id="pricing" style="background:var(--surface-2);">
-  <div class="container">
-    <div class="sec-head" data-reveal="up">
-      <div class="eyebrow"><span class="dot"></span> Pricing</div>
-      <h2>Simple Pricing. <span class="grad-text">Clear Services.</span></h2>
-      <p>Choose the services your business needs. For custom requirements, talk to our team.</p>
-    </div>
-
-    <div class="svc-price-group" data-reveal="up">
-      <h3 class="svc-price-cat-title"><i class="fa-solid fa-pen-ruler"></i> Design &amp; Development</h3>
-      <div class="svc-price-grid stagger">
-        <div class="svc-price-card" data-reveal="up" style="--i:0">
-          <div class="svc-price-name">Graphic Design</div>
-          <div class="svc-price-amt">Custom Pricing</div>
-          <p class="svc-price-desc">Scoped to your logo, branding or campaign needs.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm">Talk to Us <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:1">
-          <div class="svc-price-name">Website Development</div>
-          <div class="svc-price-amt">Rs. 9,999</div>
-          <p class="svc-price-desc">A responsive, professional business website.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card featured" data-reveal="up" style="--i:2">
-          <div class="svc-price-badge">Popular</div>
-          <div class="svc-price-name">Social Media Management</div>
-          <div class="svc-price-amt">Rs. 12,000<span>/month</span></div>
-          <ul class="svc-price-features">
-            <li><i class="fa-solid fa-circle-check"></i> 30 social media posts</li>
-            <li><i class="fa-solid fa-circle-check"></i> Daily posting</li>
-            <li><i class="fa-solid fa-circle-check"></i> Content provided by MBS Agency</li>
-            <li><i class="fa-solid fa-circle-check"></i> Professional captions &amp; hashtags</li>
-            <li><i class="fa-solid fa-circle-check"></i> Posting handled by our team</li>
-          </ul>
-          <a href="contact.html" class="btn btn-white btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:3">
-          <div class="svc-price-name">Shopify Store Management</div>
-          <div class="svc-price-amt">Rs. 5,000<span>/month</span></div>
-          <p class="svc-price-desc">Ongoing setup, upkeep and store support.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="svc-price-group" data-reveal="up">
-      <h3 class="svc-price-cat-title"><i class="fa-solid fa-robot"></i> AI &amp; Automation</h3>
-      <div class="svc-price-grid stagger">
-        <div class="svc-price-card" data-reveal="up" style="--i:0">
-          <div class="svc-price-name">AI Chatbot</div>
-          <div class="svc-price-amt">Rs. 6,000</div>
-          <p class="svc-price-desc">A trained website chatbot for support &amp; leads.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:1">
-          <div class="svc-price-name">WhatsApp Chatbot</div>
-          <div class="svc-price-amt">Rs. 6,000</div>
-          <p class="svc-price-desc">Automated replies right on WhatsApp.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:2">
-          <div class="svc-price-name">AI Automation</div>
-          <div class="svc-price-amt">Custom Pricing</div>
-          <p class="svc-price-desc">Workflows scoped to your business needs.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm">Talk to Us <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:3">
-          <div class="svc-price-name">AI UGC Ads</div>
-          <div class="svc-price-amt">Rs. 500<span>/ad</span></div>
-          <p class="svc-price-desc">Also available as 12 AI UGC ads for Rs. 5,000.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="svc-price-group" data-reveal="up">
-      <h3 class="svc-price-cat-title"><i class="fa-solid fa-bullhorn"></i> Paid Advertising</h3>
-      <div class="svc-price-grid stagger">
-        <div class="svc-price-card" data-reveal="up" style="--i:0">
-          <div class="svc-price-name">Meta Ads Campaign</div>
-          <div class="svc-price-amt">Rs. 2,500<span>/campaign</span></div>
-          <p class="svc-price-desc">Set up, launch &amp; regularly monitor performance.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="svc-price-card" data-reveal="up" style="--i:1">
-          <div class="svc-price-name">TikTok Ads Campaign</div>
-          <div class="svc-price-amt">Rs. 3,000<span>/campaign</span></div>
-          <p class="svc-price-desc">Set up, launch &amp; regularly monitor performance.</p>
-          <a href="contact.html" class="btn btn-outline btn-sm">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-      <p class="svc-price-note"><i class="fa-solid fa-circle-info"></i> Advertising budget is separate. Campaign performance is monitored regularly — results are not guaranteed.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============================================================
      FAQ
      ============================================================ -->
 <section class="section-pad" id="faq">
   <div class="container">
     <div class="sec-head" data-reveal="up">
       <div class="eyebrow"><span class="dot"></span> FAQ</div>
-      <h2>Questions, <span class="grad-text">Answered</span></h2>
+      <h2>Frequently Asked <span class="grad-text">Questions</span></h2>
       <p>Everything you need to know before starting a project with us.</p>
     </div>
     <div class="faq-wrap" data-reveal="up">
-      <div class="faq-item active">
-        <div class="faq-q"><span>How long does website development take?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>Most <a class="in-link" href="services.html#website-development">websites</a> launch in 2–4 weeks depending on scope and revisions. See examples in our <a class="in-link" href="portfolio.html">portfolio</a>.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span>Is the domain included in the website price?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>No — domain and hosting are billed separately. We're happy to guide you through purchasing and setup.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span>Is advertising budget included?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>No — our fee covers campaign setup and management. Your ad spend on <a class="in-link" href="services.html#meta-ads">Meta</a> or <a class="in-link" href="services.html#tiktok-ads">TikTok</a> is paid directly to the platform and is separate.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span>Do you provide social media content?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>Yes — our <a class="in-link" href="services.html#social-media-management">Social Media Management</a> service includes content creation, professional captions, hashtags and daily posting, handled by our team.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span>Can you create custom AI automation?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>Yes — <a class="in-link" href="services.html#ai-automation">AI Automation</a> is scoped and priced around your specific workflow, so we start with a short discovery call.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span>Do you manage Shopify stores?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>Yes — our <a class="in-link" href="services.html#shopify-store-management">Shopify Store Management</a> service covers ongoing setup, upkeep and support for your store.</p></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q"><span>How do I start a project?</span><i class="fa-solid fa-plus"></i></div>
-        <div class="faq-a"><p>Book a call or message us on WhatsApp — we'll discuss your goals and recommend the right services to get started.</p></div>
-      </div>
-    </div>
+  <div class="faq-item active">
+  <div class="faq-q"><span>Which digital marketing services do you offer in Karachi?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p>We offer <a class="in-link" href="website-developer-karachi.html">website development</a>, <a class="in-link" href="shopify-developer-karachi.html">Shopify store management</a>, <a class="in-link" href="social-media-marketing-karachi.html">social media marketing</a>, <a class="in-link" href="meta-ads-management-karachi.html">Meta and TikTok ads</a>, <a class="in-link" href="google-ads-management-karachi.html">Google Ads</a>, <a class="in-link" href="graphic-design-video-editing-karachi.html">graphic design</a>, <a class="in-link" href="graphic-design-video-editing-karachi.html">video editing</a> and <a class="in-link" href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI chatbots</a>.</p></div>
+  </div>
+  <div class="faq-item">
+  <div class="faq-q"><span>How much does a business website cost?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p>Our business website package starts from Rs. 9,999. Domain and hosting are billed separately. Custom projects are quoted after a short discussion. See our <a class="in-link" href="website-developer-karachi.html">website developer service in Karachi</a>.</p></div>
+  </div>
+  <div class="faq-item">
+  <div class="faq-q"><span>Is the domain included in the website price?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p>No — domain and hosting are billed separately. We're happy to guide you through purchasing and setup.</p></div>
+  </div>
+  <div class="faq-item">
+  <div class="faq-q"><span>How much does social media management cost?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p>Our <a class="in-link" href="social-media-marketing-karachi.html">social media management package</a> is Rs. 12,000 per month and includes 30 posts, daily posting, professional captions and hashtags.</p></div>
+  </div>
+  <div class="faq-item">
+  <div class="faq-q"><span>Is the advertising budget included in your price?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p>No. Our fee covers campaign setup and management. Your ad spend on Meta or TikTok is paid directly to the platform.</p></div>
+  </div>
+  <div class="faq-item">
+  <div class="faq-q"><span>How long does website development take?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p>Most <a class="in-link" href="website-developer-karachi.html">websites</a> launch in 2 to 4 weeks depending on scope and revisions. See examples in our <a class="in-link" href="portfolio.html">portfolio</a>.</p></div>
+  </div>
+  <div class="faq-item">
+  <div class="faq-q"><span>Can you create custom AI automation?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p>Yes — <a class="in-link" href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Automation</a> is scoped and priced around your specific workflow, so we start with a short discovery call.</p></div>
+  </div>
+  <div class="faq-item">
+  <div class="faq-q"><span>Do you manage Shopify stores?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p>Yes — our <a class="in-link" href="shopify-developer-karachi.html">Shopify Store Management</a> service covers ongoing setup, upkeep and support for your store.</p></div>
+  </div>
+  <div class="faq-item">
+  <div class="faq-q"><span>Do you work with businesses outside Karachi?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p>Yes. We work remotely with clients across Pakistan and internationally.</p></div>
+  </div>
+  <div class="faq-item">
+  <div class="faq-q"><span>How do I start a project?</span><i class="fa-solid fa-plus"></i></div>
+  <div class="faq-a"><p><a class="in-link" href="contact.html">Book a call</a> or message us on WhatsApp and we will recommend the right services for your goals.</p></div>
+  </div>
+  </div>
   </div>
 </section>
 
@@ -2071,91 +2052,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      ============================================================ -->
 <section style="padding:20px 0 120px;">
   <div class="cta-band" data-reveal="scale">
-    <h2>Ready to Grow Your Business?</h2>
-    <p>Let's build a stronger digital presence for your business.</p>
+    <h2>Ready to Grow Your Business in Karachi?</h2>
+    <p>Tell us about your business and goals. We will reply within one business day with clear next steps.</p>
     <div class="cta-btns">
       <a href="contact.html" class="btn btn-white">Book a Call <i class="fa-solid fa-arrow-right"></i></a>
       <a href="https://wa.me/923361205498" target="_blank" rel="noopener" class="btn btn-outline" style="border-color:rgba(255,255,255,.5); color:#fff;"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     CONTACT
-     ============================================================ -->
-<section class="section-pad" id="contact" style="background:var(--surface-2);">
-  <div class="container contact-grid">
-    <div class="contact-info" data-reveal="left">
-      <div class="eyebrow"><span class="dot"></span> Get In Touch</div>
-      <h2>Let's Start Your <span class="grad-text">Next Project</span></h2>
-      <p>Tell us about your business and goals — we'll reply within one business day with next steps.</p>
-
-      <div class="info-row"><div class="info-icon"><i class="fa-solid fa-envelope"></i></div><div><h4>Email</h4><p>mbswebagency@gmail.com</p></div></div>
-      <div class="info-row"><div class="info-icon"><i class="fa-solid fa-phone"></i></div><div><h4>Phone</h4><p>+92 336 1205498</p></div></div>
-      <div class="info-row"><div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div><div><h4>WhatsApp</h4><p>Chat with us instantly</p></div></div>
-      <div class="info-row"><div class="info-icon"><i class="fa-solid fa-location-dot"></i></div><div><h4>Location</h4><p>Remote-first · Serving clients worldwide</p></div></div>
-
-      <div class="social-row">
-        <a href="https://www.instagram.com/mbs_agencyofficial/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/mbsagency/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://www.facebook.com/mbsagencyofficial/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      </div>
-    </div>
-
-    <form class="contact-form" id="contactForm" data-reveal="right">
-      <div class="form-row">
-        <div class="form-group" id="fnameGroup"><label for="fname">Full Name</label><input type="text" id="fname" name="name" placeholder="Your full name" required><span class="field-error">Please enter your name.</span></div>
-        <div class="form-group" id="femailGroup"><label for="femail">Email Address</label><input type="email" id="femail" name="email" placeholder="you@company.com" required><span class="field-error">Please enter a valid email address.</span></div>
-      </div>
-      <div class="form-row">
-        <div class="form-group"><label for="fphone">Phone Number</label><input type="tel" id="fphone" name="phone" placeholder="+92 300 0000000"></div>
-        <div class="form-group"><label for="fcompany">Company Name</label><input type="text" id="fcompany" name="company" placeholder="Your company"></div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="fservice">Service Needed</label>
-          <select id="fservice" name="service">
-            <option>Graphic Design</option>
-            <option>Website Development</option>
-            <option>AI Chatbot</option>
-            <option>AI Automation</option>
-            <option>WhatsApp Chatbot</option>
-            <option>Meta Ads</option>
-            <option>Meta Ads Management</option>
-            <option>TikTok Ads</option>
-            <option>TikTok Ads Management</option>
-            <option>Shopify Store Management</option>
-            <option>Social Media Management</option>
-            <option>AI UGC Ads</option>
-            <option>Other / Custom Requirement</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="fbudget">Estimated Budget</label>
-          <select id="fbudget" name="budget">
-            <option>Under Rs. 5,000</option>
-            <option>Rs. 5,000 – Rs. 10,000</option>
-            <option>Rs. 10,000 – Rs. 20,000</option>
-            <option>Rs. 20,000 – Rs. 50,000</option>
-            <option>Rs. 50,000+</option>
-            <option>Not Sure / Need a Custom Quote</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group full" id="fmessageGroup" style="margin-bottom:22px;">
-        <label for="fmessage">Project Details</label>
-        <textarea id="fmessage" name="message" placeholder="Tell us a bit about your project and goals..." required></textarea>
-        <span class="field-error">Please share a few details about your project.</span>
-      </div>
-      <div class="form-status" id="formStatus"></div>
-      <div class="form-submit">
-        <button type="submit" class="btn btn-primary" id="formSubmitBtn">
-          <span class="btn-label"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
-        </button>
-        <a href="https://wa.me/923361205498" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
-      </div>
-      <p class="form-note">We typically respond within 24 hours on business days.</p>
-    </form>
   </div>
 </section>
 
@@ -2176,6 +2078,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <div class="footer-services"><div class="footer-find-us">Services</div><nav aria-label="Services"><a href="website-developer-karachi.html">Website Development</a><a href="shopify-developer-karachi.html">Shopify Store Management</a><a href="social-media-marketing-karachi.html">Social Media Marketing</a><a href="meta-ads-management-karachi.html">Meta &amp; TikTok Ads</a><a href="google-ads-management-karachi.html">Google Ads</a><a href="ai-chatbot-whatsapp-chatbot-pakistan.html">AI Chatbots &amp; Automation</a><a href="graphic-design-video-editing-karachi.html">Graphic Design &amp; Video Editing</a><a href="services.html">All Services</a></nav></div>
     </div>
     <div class="footer-right">
       <div class="footer-find-us">Find Us Here</div>
@@ -2203,20 +2106,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- EmailJS SDK — required for the contact form to send real emails.
      See the EMAILJS CONFIG block in the script below for setup instructions. -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
  
 
-<!-- Portfolio image lightbox — opens when any portfolio carousel image is clicked -->
-<div class="port-lightbox" id="portLightbox">
-  <button class="port-lightbox-close" id="portLightboxClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-  <button class="port-lightbox-arrow port-lightbox-prev" id="portLightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
-  <div class="port-lightbox-stage">
-    <img id="portLightboxImg" src="" alt="">
-    <video id="portLightboxVideo" controls playsinline style="display:none;"></video>
-    <div class="port-lightbox-caption" id="portLightboxCaption"></div>
-  </div>
-  <button class="port-lightbox-arrow port-lightbox-next" id="portLightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
-</div>
 
 <script>
 /* ============================================================
@@ -2442,121 +2333,6 @@ document.querySelectorAll('.faq-item').forEach(item => {
 });
 
 /* ============================================================
-   CONTACT FORM — EmailJS Integration
-   ============================================================
-   SETUP REQUIRED: This form uses EmailJS (https://www.emailjs.com)
-   to send submissions straight to your Gmail inbox — no backend needed.
-
-   To activate it:
-   1. Create a free account at https://www.emailjs.com
-   2. Add an Email Service (connect your Gmail) → copy its Service ID
-   3. Create an Email Template with variables: {{name}}, {{email}},
-      {{phone}}, {{company}}, {{service}}, {{budget}}, {{message}}
-      → copy its Template ID
-   4. Go to Account → General → copy your Public Key
-   5. Paste all three values into the constants below.
-
-   Until these are filled in, the form will show a friendly error
-   message instead of silently failing.
-   ============================================================ */
-const EMAILJS_PUBLIC_KEY  = 'sJ5FVeUB7cFSNDEkW';
-const EMAILJS_SERVICE_ID  = 'service_7q9rm8h';
-const EMAILJS_TEMPLATE_ID = 'template_jfe6fbd';
-
-if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY'){
-  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-}
-
-const contactForm   = document.getElementById('contactForm');
-const formStatus    = document.getElementById('formStatus');
-const formSubmitBtn = document.getElementById('formSubmitBtn');
-
-function setFieldError(groupId, isError){
-  const group = document.getElementById(groupId);
-  if (group) group.classList.toggle('error', isError);
-}
-
-function showFormStatus(type, message){
-  formStatus.className = 'form-status show ' + type;
-  formStatus.innerHTML = (type === 'success'
-    ? '<i class="fa-solid fa-circle-check"></i> '
-    : '<i class="fa-solid fa-triangle-exclamation"></i> ') + message;
-}
-function hideFormStatus(){
-  formStatus.className = 'form-status';
-  formStatus.innerHTML = '';
-}
-
-function validateContactForm(){
-  let valid = true;
-  const name = document.getElementById('fname').value.trim();
-  const email = document.getElementById('femail').value.trim();
-  const message = document.getElementById('fmessage').value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  setFieldError('fnameGroup', false);
-  setFieldError('femailGroup', false);
-  setFieldError('fmessageGroup', false);
-
-  if (name.length < 2){ setFieldError('fnameGroup', true); valid = false; }
-  if (!emailPattern.test(email)){ setFieldError('femailGroup', true); valid = false; }
-  if (message.length < 10){ setFieldError('fmessageGroup', true); valid = false; }
-
-  return valid;
-}
-
-if (contactForm){
-  contactForm.addEventListener('submit', function(e){
-    e.preventDefault();
-    hideFormStatus();
-
-    if (!validateContactForm()){
-      showFormStatus('error', 'Please fix the highlighted fields and try again.');
-      return;
-    }
-
-    if (typeof emailjs === 'undefined'){
-      showFormStatus('error', 'Could not load the email service. Please try again or message us on WhatsApp.');
-      return;
-    }
-    if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY'){
-      showFormStatus('error', 'Contact form isn\'t fully configured yet — please reach out via WhatsApp or email in the meantime.');
-      return;
-    }
-
-    const templateParams = {
-      name: document.getElementById('fname').value.trim(),
-      email: document.getElementById('femail').value.trim(),
-      phone: document.getElementById('fphone').value.trim() || 'Not provided',
-      company: document.getElementById('fcompany').value.trim() || 'Not provided',
-      service: document.getElementById('fservice').value,
-      budget: document.getElementById('fbudget').value,
-      message: document.getElementById('fmessage').value.trim()
-    };
-
-    formSubmitBtn.classList.add('is-loading');
-
-    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-      .then(() => {
-        formSubmitBtn.classList.remove('is-loading');
-        showFormStatus('success', 'Message sent! Our team will get back to you within 24 hours.');
-        contactForm.reset();
-      })
-      .catch((err) => {
-        formSubmitBtn.classList.remove('is-loading');
-        showFormStatus('error', 'Something went wrong sending your message. Please try WhatsApp instead.');
-        console.error('EmailJS error:', err);
-      });
-  });
-
-  // clear error state as the visitor starts fixing a field
-  ['fname','femail','fmessage'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('input', () => setFieldError(id + 'Group', false));
-  });
-}
-
-/* ============================================================
    BACK TO TOP
    ============================================================ */
 document.getElementById('backToTop').addEventListener('click', () => {
@@ -2568,257 +2344,6 @@ document.getElementById('backToTop').addEventListener('click', () => {
    FOOTER YEAR
    ============================================================ */
 document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-/* ============================================================
-   PORTFOLIO DATA — edit this array to replace placeholder images
-   ============================================================
-   Each project has: client, description, services (tags), and an
-   images array. These are currently temporary Unsplash placeholder
-   photos chosen to visually match each business type — NOT actual
-   client work. To swap in real project photos, just replace the
-   URLs inside `images` (add, remove or reorder as many as you like)
-   — the cards, carousels, arrows/dots and layout below are all
-   generated automatically from this data, so nothing else needs
-   to change.
-   ============================================================ */
-const portfolioProjects = [
-  {
-    client: "Burger Star",
-    description: "Restaurant Growth & Digital Presence",
-    services: ["Social Media", "Graphic Design", "AI UGC", "Website"],
-    images: [
-      "assets/images/portfolio/burger-star/1.jpg", "assets/images/portfolio/burger-star/2.jpg", "assets/images/portfolio/burger-star/3.jpg", "assets/images/portfolio/burger-star/4.jpg", "assets/images/portfolio/burger-star/5.jpg"
-    ]
-  },
-  {
-    client: "Dry Delights",
-    description: "E-commerce & Brand Growth",
-    services: ["Graphic Design", "E-commerce", "Shopify", "Social Media"],
-    images: [
-      "assets/videos/portfolio/dry-delights/reel-1.mp4",
-      "assets/images/portfolio/dry-delights/1.jpg", "assets/images/portfolio/dry-delights/2.jpg", "assets/images/portfolio/dry-delights/3.jpg", "assets/images/portfolio/dry-delights/4.jpg"
-    ]
-  },
-  {
-    client: "Zamana",
-    description: "Website SEO",
-    services: ["Website", "SEO"],
-    images: [
-      "assets/images/portfolio/zamana/1.jpg"
-    ]
-  },
-  {
-    client: "Novatools",
-    description: "AI Ad",
-    services: ["Graphic Design", "Website"],
-    images: [
-      "assets/videos/portfolio/novatools/ai-ad.mp4"
-    ]
-  },
-  {
-    client: "Scenturies",
-    description: "Premium E-commerce Brand",
-    services: ["AI UGC", "Graphic Design", "E-commerce", "Social Media"],
-    images: [
-      "assets/images/portfolio/scenturies/1.jpg", "assets/images/portfolio/scenturies/2.jpg", "assets/images/portfolio/scenturies/3.jpg", "assets/images/portfolio/scenturies/4.jpg"
-    ]
-  },
-  {
-    client: "Waseem Women's Boutique",
-    description: "Fashion & E-commerce",
-    services: ["Graphic Design", "Social Media"],
-    images: [
-      "assets/images/portfolio/waseem-boutique/1.jpg", "assets/images/portfolio/waseem-boutique/2.jpg", "assets/images/portfolio/waseem-boutique/3.jpg"
-    ]
-  },
-];
-
-(function renderPortfolio(){
-  const grid = document.getElementById('portfolioGrid');
-  if (!grid) return;
-  function isVideo(src){
-    return src.indexOf('data:video') === 0 || /\.(mp4|webm|mov)(\?|$)/i.test(src);
-  }
-  grid.innerHTML = portfolioProjects.map(function(p, i){
-    const slides = p.images.map(function(src){
-      if (isVideo(src)){
-        return '<div class="port-slide port-slide-video">' +
-                 '<video src="' + src + '" muted loop autoplay playsinline preload="metadata"></video>' +
-                 '<div class="port-play-badge"><i class="fa-solid fa-play"></i></div>' +
-               '</div>';
-      }
-      return '<div class="port-slide"><img src="' + src + '" alt="' + p.client + ' project photo" loading="lazy"></div>';
-    }).join('');
-    const tags = p.services.map(function(s){ return '<span>' + s + '</span>'; }).join('');
-    return (
-      '<div class="port-card in-view">' +
-        '<div class="port-slider">' +
-          '<div class="port-slider-track">' + slides + '</div>' +
-          '<button class="port-arrow port-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>' +
-          '<button class="port-arrow port-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>' +
-          '<div class="port-dots"></div>' +
-        '</div>' +
-        '<div class="port-card-body">' +
-          '<h3>' + p.client + '</h3>' +
-          '<p>' + p.description + '</p>' +
-          '<div class="port-tags">' + tags + '</div>' +
-          '<a href="contact.html" class="port-view-btn">View Project <i class="fa-solid fa-arrow-right"></i></a>' +
-        '</div>' +
-      '</div>'
-    );
-  }).join('');
-})();
-</script>
-<script>
-/* ============================================================
-   PORTFOLIO SLIDERS — prev/next, dots, swipe, autoslide
-   (kept separate from script.js so it's easy to spot/verify)
-   ============================================================ */
-(function initPortSliders(){
-  document.querySelectorAll('.port-slider').forEach(function(slider){
-    var track = slider.querySelector('.port-slider-track');
-    var slides = Array.prototype.slice.call(track.children);
-    var prevBtn = slider.querySelector('.port-prev');
-    var nextBtn = slider.querySelector('.port-next');
-    var dotsWrap = slider.querySelector('.port-dots');
-    var idx = 0;
-    var autoTimer = null;
-
-    // Only one slide right now (placeholder logo) — hide controls until more images are added.
-    if (slides.length <= 1) {
-      if (prevBtn) prevBtn.style.display = 'none';
-      if (nextBtn) nextBtn.style.display = 'none';
-      if (dotsWrap) dotsWrap.style.display = 'none';
-      return;
-    }
-
-    slides.forEach(function(_, i){
-      var dot = document.createElement('button');
-      dot.className = 'port-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
-      dot.addEventListener('click', function(){ goTo(i); restartAuto(); });
-      dotsWrap.appendChild(dot);
-    });
-    var dots = Array.prototype.slice.call(dotsWrap.children);
-
-    function goTo(i){
-      idx = (i + slides.length) % slides.length;
-      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
-      dots.forEach(function(d, di){ d.classList.toggle('active', di === idx); });
-    }
-    function startAuto(){ autoTimer = setInterval(function(){ goTo(idx + 1); }, 4500); }
-    function stopAuto(){ if (autoTimer) clearInterval(autoTimer); }
-    function restartAuto(){ stopAuto(); startAuto(); }
-
-    if (prevBtn) prevBtn.addEventListener('click', function(){ goTo(idx - 1); restartAuto(); });
-    if (nextBtn) nextBtn.addEventListener('click', function(){ goTo(idx + 1); restartAuto(); });
-    slider.addEventListener('mouseenter', stopAuto);
-    slider.addEventListener('mouseleave', startAuto);
-
-    // touch swipe
-    var touchStartX = 0;
-    track.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; stopAuto(); }, {passive:true});
-    track.addEventListener('touchend', function(e){
-      var dx = e.changedTouches[0].clientX - touchStartX;
-      if (dx > 40) goTo(idx - 1);
-      else if (dx < -40) goTo(idx + 1);
-      startAuto();
-    }, {passive:true});
-
-    startAuto();
-  });
-})();
-</script>
-<script>
-/* ============================================================
-   PORTFOLIO IMAGE LIGHTBOX
-   Click any portfolio carousel image to open it full-size with
-   its own prev/next navigation through that project's images.
-   Uses event delegation on #portfolioGrid so it works even though
-   the cards are rendered dynamically from portfolioProjects.
-   ============================================================ */
-(function initPortLightbox(){
-  const grid = document.getElementById('portfolioGrid');
-  const lightbox = document.getElementById('portLightbox');
-  if (!grid || !lightbox) return;
-
-  const imgEl = document.getElementById('portLightboxImg');
-  const videoEl = document.getElementById('portLightboxVideo');
-  const captionEl = document.getElementById('portLightboxCaption');
-  const closeBtn = document.getElementById('portLightboxClose');
-  const prevBtn = document.getElementById('portLightboxPrev');
-  const nextBtn = document.getElementById('portLightboxNext');
-
-  function isVideo(src){
-    return src.indexOf('data:video') === 0 || /\.(mp4|webm|mov)(\?|$)/i.test(src);
-  }
-
-  let currentImages = [];
-  let currentIndex = 0;
-  let currentClient = '';
-
-  function show(i){
-    currentIndex = (i + currentImages.length) % currentImages.length;
-    const src = currentImages[currentIndex];
-    videoEl.pause();
-    if (isVideo(src)){
-      imgEl.style.display = 'none';
-      videoEl.style.display = '';
-      videoEl.style.opacity = '0';
-      videoEl.src = src;
-      videoEl.currentTime = 0;
-      requestAnimationFrame(function(){ videoEl.style.opacity = '1'; });
-    } else {
-      videoEl.style.display = 'none';
-      videoEl.removeAttribute('src');
-      imgEl.style.display = '';
-      imgEl.style.opacity = '0';
-      imgEl.src = src;
-      imgEl.alt = currentClient + ' — image ' + (currentIndex + 1) + ' of ' + currentImages.length;
-      requestAnimationFrame(function(){ imgEl.style.opacity = '1'; });
-    }
-    captionEl.textContent = currentClient + '  ·  ' + (currentIndex + 1) + ' / ' + currentImages.length;
-  }
-
-  function open(images, startIndex, client){
-    currentImages = images;
-    currentClient = client;
-    show(startIndex);
-    lightbox.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function close(){
-    lightbox.classList.remove('open');
-    document.body.style.overflow = '';
-    videoEl.pause();
-  }
-
-  grid.addEventListener('click', function(e){
-    const media = e.target.closest('.port-slide img, .port-slide video');
-    if (!media) return;
-    const card = media.closest('.port-card');
-    if (!card) return;
-    const project = portfolioProjects[Array.prototype.indexOf.call(grid.children, card)];
-    if (!project) return;
-    const slideEl = media.closest('.port-slide');
-    const track = card.querySelector('.port-slider-track');
-    const idx = Array.prototype.indexOf.call(track.children, slideEl);
-    open(project.images, idx, project.client);
-  });
-
-  closeBtn.addEventListener('click', close);
-  lightbox.addEventListener('click', function(e){ if (e.target === lightbox) close(); });
-  prevBtn.addEventListener('click', function(){ show(currentIndex - 1); });
-  nextBtn.addEventListener('click', function(){ show(currentIndex + 1); });
-  document.addEventListener('keydown', function(e){
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') show(currentIndex - 1);
-    if (e.key === 'ArrowRight') show(currentIndex + 1);
-  });
-})();
 </script>
 <script>
 /* ============================================================
@@ -2933,6 +2458,17 @@ const portfolioProjects = [
   render(false);
   startAuto();
 })();
+</script>
+
+<script>
+/* Mobile menu: the arrow next to "Services" opens the service links */
+document.querySelectorAll('.mm-arrow').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    var g = btn.closest('.mm-group'), open = g.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
 </script>
 </body>
 </html>
